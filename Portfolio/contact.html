@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Me contacter | William Tchang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(161, 164, 255);}
+    * {box-sizing: border-box;}
+
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+    input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      }
+
+    input[type=submit] {
+    background-color: #019142;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #019142;
+    }
+
+    .container {
+    border-radius: 5px;
+    background:linear-gradient(to left, rgb(7, 0, 206),rgb(249, 198, 198)) ;
+    padding: 20px;
+    }
+    h3{
+        display: flex ;
+        justify-content: center;
+    }
+    
+    </style>
+</head>
+<body>
+
+<h3>Formulaire de contact</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Nom</label>
+    <input type="text" id="fname" name="firstname" placeholder="Ton prénom ...">
+
+    <label for="lname">Prénom</label>
+    <input type="text" id="lname" name="lastname" placeholder="Ton nom ...">
+
+    <label for="email">Mail</label>
+    <input type="email" id="email" name="email" placeholder="Ton mail ...">
+
+    <label for="country">Pays</label>
+    <select id="country" name="country">
+      <option value="australia">France</option>
+      <option value="canada">Etat-Unis</option>
+      <option value="usa">Espagne</option>
+    </select>
+
+    <label for="subject">Sujet</label>
+    <textarea id="subject" name="subject" placeholder=" Écris quelque chose.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
