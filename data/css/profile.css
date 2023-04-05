@@ -404,6 +404,7 @@ nav ul li a h1 {
 }
 
 .bloc-footer .blocAction button i {
+    color: #fff;
     font-size: medium;
     transition: 0.5s;
 }
