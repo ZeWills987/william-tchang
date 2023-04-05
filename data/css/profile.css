@@ -409,7 +409,7 @@ nav ul li a h1 {
     transition: 0.5s;
 }
 
-.bloc-footer i:hover {
+.bloc-footer button i:hover {
     transition: 0.5s;
     color: #1AD6E5;
 }
