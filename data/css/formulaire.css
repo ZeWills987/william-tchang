@@ -1,0 +1,197 @@
+.formulaire input {
+    color: #fff;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.formulaire {
+    margin: 0px;
+    width: 380px;
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hidden 4s;
+    animation: mouv_vert 4s;
+}
+
+.formulaire form {
+    padding: 25px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulaire form a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.formulaire form a:hover {
+    color: #1AD6E5;
+}
+
+.formulaire form .row-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.formulaire form .row-form .col-1 {
+    margin: 15px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulaire form .row-form .col-1 label,
+.formulaire form .row-form .col-3 label {
+    margin: 0 0 10px 0;
+}
+
+.formulaire form .row-form .col-1 input {
+    padding: 0;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    line-height: 40px;
+    background-color: transparent;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+
+.formulaire form>input {
+    margin: 20px;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 3px;
+    line-height: 40px;
+    color: black;
+    background-color: #fff;
+    font-size: medium;
+}
+
+.formulaire form .row-form .pdp {
+    width: 200px;
+    height: 200px;
+}
+
+.formulaire form .row-form .pdp img {
+    width: 100%;
+    height: 100%;
+}
+
+.formulaire form>input {
+    padding: 10px;
+    transition: 1s;
+}
+
+.formulaire form>input:hover {
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 1s;
+    color: #1AD6E5;
+}
+
+.formulaire .alert-success {
+    color: rgb(32, 184, 32);
+    animation: hidden 4s;
+    animation: mouv_vert 4s;
+}
+
+.formulaire .alert-danger {
+    color: red;
+    animation: hidden 4s;
+    animation: mouv_vert 4s;
+}
+
+.inscription {
+    display: flex;
+    flex-direction: row;
+}
+
+.inscription p {
+    margin: 0;
+    color: #fff;
+    transition: 1s;
+    animation: hidden 4s;
+    animation: mouv_vert 4s;
+}
+
+.inscription p a {
+    color: #fff;
+    transition: 1s;
+}
+
+.inscription p a:hover {
+    transition: 1s;
+    text-decoration: underline;
+}
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    .bloc {
+        width: 90%;
+    }
+
+    .bloc .formulaire {
+        margin: 50px 0 0 0;
+        width: 100%;
+    }
+
+    .formulaire form {
+        width: 75%;
+    }
+
+    .formulaire form .title h1 {
+        margin: 0 0 20px 0;
+    }
+
+    .formulaire label {
+        font-size: 10px;
+    }
+
+    .formulaire form .row-form {
+        width: 100%;
+    }
+
+    .formulaire form .row-form .col-1 {
+        margin: 5px 0 20px 0;
+    }
+
+    .formulaire form .row-form .col-1 input {
+        padding: 6px 6px;
+        width: 90%;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .formulaire form>input {
+        padding: 6px 6px;
+        width: 80%;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .formulaire form .inscription p {
+        font-size: 12px;
+    }
+
+    .formulaire form .inscription a {
+        font-size: 12px;
+    }
+
+    #mobile-nav ul li {
+        list-style: none;
+    }
+}
