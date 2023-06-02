@@ -339,6 +339,11 @@ nav ul li a h1 {
     flex-direction: row;
 }
 
+.bloc:hover .bloc-wave p {
+    margin: 0;
+    padding: 0;
+}
+
 .bloc-play {
     margin: 0 15px 0 15px;
     width: 35px;
@@ -388,8 +393,12 @@ nav ul li a h1 {
 }
 
 .bloc-wave {
-    width: 100%;
+    width: 90%;
     height: 100%;
+}
+
+.bloc-play {
+    margin: 0;
 }
 
 .bloc-footer {
@@ -493,7 +502,7 @@ footer {
     }
 
     .bloc:hover .bloc-wave {
-        margin: 0 0 0 10px;
+        margin: 0;
         padding: 0;
         display: flex;
         width: 90%;
