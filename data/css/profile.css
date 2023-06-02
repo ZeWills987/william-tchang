@@ -290,19 +290,22 @@ nav ul li a h1 {
 }
 
 .bloc-img img {
-    animation: hidden 2s;
-    animation: mouv_horiz 2s;
+    animation: hidden 2.5s;
+    animation: mouv_horiz 2.5s;
     width: 70px;
     height: 70px;
     border-radius: 10px;
     transition: 0.3s;
+    object-fit: cover;
+    object-position: 50%;
+    transform: scale(1) translate(0, 0);
 }
 
 .bloc:hover .bloc-img img {
-    animation: hidden 2s;
-    animation: mouv_horiz 2s;
-    width: 250px;
-    height: 230px;
+    animation: hidden 2.5s;
+    animation: mouv_horiz 2.5s;
+    width: 280px;
+    height: 280px;
     transition: 0.3s;
 }
 
@@ -322,6 +325,11 @@ nav ul li a h1 {
 }
 
 .bloc-wave p {
+    color: #fff;
+}
+
+.bloc-wave ul li {
+    list-style: disc;
     color: #fff;
 }
 
@@ -449,167 +457,171 @@ nav ul li a h1 {
     color: rgb(232, 232, 232);
 }
 
-/* Album */
-
-.album {
-    padding: 0;
-    width: 100%;
-    z-index: 0;
-}
-
-.album:hover {
-    width: 100%+10px;
-}
-
-.album .album-col {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.album .album-col .album-row {
-    margin: 0 0 15px 0;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.516);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-.album-img img {
-    max-width: 250px;
-    min-height: 200px;
-    border-radius: 10px;
-}
-
-.album-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.album-header {
-    display: flex;
-    flex-direction: row;
-}
-
-.album-play {
-    margin: 0 15px 0 15px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.album-play i {
-    color: #fff;
-    align-items: center;
-}
-
-.album-title {
-    width: max-content;
-}
-
-.album-title h4 {
-    margin: 0;
-    width: max-content;
-    font-size: large;
-    font-weight: 700;
-    color: #fff;
-}
-
-.album-title p {
-    margin: 0;
-    width: max-content;
-    font-size: medium;
-    font-weight: 500;
-    color: #fff;
-}
-
-.album-date {
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.album-date p {
-    margin: 0 0 0 10px;
-    width: max-content;
-    color: #dddddd;
-    text-decoration-color: #1AD6E5;
-}
-
-.album-bloc {
-    width: 100%;
-    height: 100%;
-}
-
-.album-footer {
-    margin: 0 0 0 25px;
-    height: max-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.album-footer .albumAction {
-    flex: 20;
-}
-
-.album-footer .albumAction button {
-    margin: 0 5px 0 0;
-    width: max-content;
-    height: max-content;
-    background-color: transparent;
-    color: #fff;
-}
-
-.album-footer .albumAction button i {
-    font-size: medium;
-}
-
-.album-footer .albumAction button p {
-    margin: 0;
-}
-
-.album-footer .album-footer-right {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.album-footer .album-footer-right .ecoute p {
-    margin: 0;
-    font-size: small;
-    color: rgb(232, 232, 232);
-}
-
-
-.album-footer .album-footer-right .ecoute {
-    width: max-content;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.album-footer .album-footer-right .ecoute i {
-    margin: 0 0 0 5px;
-    height: max-content;
-    font-size: small;
-    color: rgb(232, 232, 232);
-}
-
 footer {
     margin: 0 0 100px 0;
 }
 
 .container footer {
     background-color: transparent;
+}
+
+@media screen and (min-width:750px) and (max-width:1200px) {
+    .background .container {
+        width: 100%;
+    }
+
+    .general-information .avatar {
+        width: 100%;
+    }
+
+    .bloc .bloc-col {
+        width: 100%;
+    }
+
+    .bloc .bloc-col .bloc-row {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .bloc:hover .bloc-col .bloc-row {
+        width: 100%;
+    }
+
+    .bloc-play {
+        margin: 0;
+        width: 10px;
+    }
+
+    .bloc:hover .bloc-wave {
+        margin: 0 0 0 10px;
+        padding: 0;
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .bloc-wave .wave .waveform p {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .bloc .bloc-img img {
+        margin: 0 10px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media screen and (min-width:0) and (max-width:750px) {
+    * {
+        font-size: small;
+    }
+
+    .avatar {
+        margin: 0;
+        height: max-content;
+    }
+
+    .avatar .couverture .background {
+        flex-direction: column;
+    }
+
+    .avatar .couverture .background .pdp {
+        margin: 10px 0;
+        width: 120px;
+    }
+
+    .avatar .couverture .background .pdp img {
+        width: 100%;
+        height: auto;
+    }
+
+    .avatar .couverture .background .info {
+        margin: 0;
+        width: 100%;
+    }
+
+    .avatar .couverture .background .info .row1 {
+        justify-content: center;
+    }
+
+    .avatar .couverture .background .info .row2 {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .avatar .couverture .background .info .row2>p {
+        margin: 0 0 0 5px;
+    }
+
+    .avatar .couverture .background .info .row3 {
+        margin: 5px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .avatar .couverture .background .info .row3>p {
+        margin: 0 10px;
+        width: 90%;
+    }
+
+    .bloc {
+        height: max-content;
+    }
+
+    .bloc .bloc-col {
+        width: 100%;
+    }
+
+    .bloc .bloc-col .bloc-row {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .bloc:hover .bloc-col .bloc-row {
+        width: 100%;
+    }
+
+    .bloc-play {
+        margin: 0;
+        width: 10px;
+    }
+
+    .bloc .bloc-wave {
+        margin: 0 0 0 10px;
+        padding: 0;
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .bloc-wave .wave .waveform p {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .bloc .bloc-img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bloc:hover .bloc-img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bloc-wave p,
+    .bloc-wave ul li {
+        font-size: small;
+    }
+
+    .bloc:hover .bloc-wave {
+        margin: 0 0 0 10px;
+        padding: 0;
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+    }
 }
