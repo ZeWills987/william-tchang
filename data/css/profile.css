@@ -612,6 +612,7 @@ footer {
     }
 
     .bloc .bloc-img img {
+        margin: 0 0 0 10px;
         width: 150px;
         height: 150px;
     }

@@ -339,6 +339,10 @@ footer .f-right p {
   #section-1 .formulaire-container {
     height: 100%;
   }
+
+  .nav-mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width:0px) and (max-width:720px) {
@@ -445,5 +449,47 @@ footer .f-right p {
     height: max-content;
   }
 
+  .nav-mobile {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+  }
 
+  .nav-mobile ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-mobile ul li {
+    display: flex;
+    flex: 1 1 20%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .nav-mobile ul li i {
+    font-size: large;
+    color: #1AD6E5;
+  }
+
+  .nav-mobile ul li p {
+    font-size: large;
+    color: #1AD6E5;
+  }
+
+  .nav-mobile ul li p:hover {
+    cursor: pointer;
+  }
 }

@@ -76,6 +76,10 @@ body .background {
     animation: mouv_vert 4s;
 }
 
+.nav-mobile {
+    display: none;
+}
+
 @keyframes hidden {
     0% {
         opacity: 0;
@@ -109,6 +113,7 @@ body .background {
         opacity: 1;
     }
 }
+
 
 @media screen and (min-width:720px) and (max-width:1200px) {
     .container {
@@ -169,5 +174,51 @@ body .background {
 
     footer {
         display: none;
+    }
+
+
+    .nav-mobile {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #ccc;
+        background-color: white;
+        position: sticky;
+        bottom: 0;
+    }
+
+    .nav-mobile ul {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-mobile ul li {
+        display: flex;
+        flex: 1 1 20%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-mobile ul li i {
+        font-size: large;
+        color: #1AD6E5;
+    }
+
+    .nav-mobile ul li p {
+        font-size: large;
+        color: #1AD6E5;
+    }
+
+    .nav-mobile ul li p:hover {
+        cursor: pointer;
+        color: #fff;
     }
 }
