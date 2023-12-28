@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/data/css/style.css">
+    <link rel="stylesheet" href="/data/css/aniamtion.css">
     <link rel="icon" type="image/x-icon" href="data/img/william_tchang_logo.png">
     <title>William Tchang | Portfolio</title>
 </head>
@@ -16,7 +17,7 @@
                 <img src="/data/img/william_tchang_logo.png" alt="Logo">
             </div>
             <div class="name">
-                <h3>William Tchang</h3>
+                <h2>William Tchang</h2>
             </div>
             <div class="social">
                 <div class="linkedin">
@@ -30,7 +31,7 @@
                     </a>
                 </div>
                 <div class="cv">
-                    <a href="/data/pdf/CV_TCHANG_WIlliam.pdf">
+                    <a href="/data/pdf/CV_TCHANG_WIlliam.pdf" download>
                         <img src="/data/img/icon/cv.png" alt="CV">
                     </a>
                 </div>
@@ -40,7 +41,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#Accueil">
+                        <a href="#h">
                             <div class="icon">
                                 <img src="/data/img/icon/home.png" alt="Home">
                             </div>
@@ -52,7 +53,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="#APropos">
+                        <a href="#a">
                             <div class="icon">
                                 <img src="/data/img/icon/utilisateur.png" alt="Home">
                             </div>
@@ -64,7 +65,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="#Portfolio">
+                        <a href="#p">
                             <div class="icon">
                                 <img src="/data/img/icon/afficher-le-bouton-des-applications.png" alt="Home">
                             </div>
@@ -76,7 +77,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="#Contact">
+                        <a href="#c">
                             <div class="icon">
                                 <img src="/data/img/icon/letter.png" alt="Contact">
                             </div>
@@ -93,7 +94,7 @@
         </div>
     </header>
     <main>
-        <div class="home">
+        <div class="home" id="h">
             <div class="top">
                 <div class="nothing"></div>
                 <div class="dwn-cv">
@@ -101,20 +102,22 @@
                 </div>
             </div>
             <div class="presentation">
-                <div class="name">
-                    <h1>
-                        <strong>William TCHANG</strong>
-                    </h1>
-                </div>
-                <div class="desc">
-                    <p>Je suis <span class="typed" data-typed-items="Étudiant, Jeune, Motivé, Autonome,
-                            Polyvalent, Passionné, Sociable, Chaleureux, Moi"></span>
-                        <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
-                    </p>
+                <div class="block">
+                    <div class="name">
+                        <h1>
+                            <strong>William TCHANG</strong>
+                        </h1>
+                    </div>
+                    <div class="desc">
+                        <p>Je suis <span class="typed" data-period="2000"
+                                data-typed-items='["Étudiant", "Jeune", "Motivé", "Autonome","Polyvalent", "Passionné", "Sociable", "Chaleureux", "Moi"]'></span>
+                            <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="aboutme">
+        <div class="aboutme" id="a">
             <div class="top">
                 <div class="title">
                     <h1>À Propos</h1>
@@ -124,19 +127,24 @@
                 </div>
             </div>
             <div class="main">
-                <div class="photo">
-                    <img src="/data/img/wiliam_tchang.png" alt="William Tchang">
+                <div class="block">
+                    <div class="photo">
+                        <img src="/data/img/william_tchang.jpg" alt="William Tchang">
+                    </div>
+                    <div class="desc">
+                        <p>Etudiant en deuxième année de BUT Informatique, je suis passionné par le sport, en
+                            particulier le
+                            volley-ball, où le travail d'équipe prévaut, ainsi que par la conception d'applications web.
+                        </p>
+                        <p>J’ai débuté dans le monde du web il y a 3 ans avec pour ambitions en matérialisant une idée
+                            personnelle novatrice.
+                            liée au métier de développeur </p>
+                    </div>
                 </div>
-                <div class="desc">
-                    <p>Etudiant en deuxième année de BUT Informatique, je suis passionné par le sport, en particulier le
-                        volley-ball, où le travail d'équipe prévaut, ainsi que par la conception d'applications web.</p>
-                    <p>J’ai débuté dans le monde du web il y a 3 ans avec pour ambitions en matérialisant une idée
-                        personnelle novatrice.
-                        liée au métier de développeur </p>
-                </div>
+
             </div>
         </div>
-        <div class="portfolio">
+        <div class="portfolio" id="p">
             <div class="top">
                 <div class="title">
                     <h1>Protfolio</h1>
@@ -153,12 +161,33 @@
                 </div>
                 <div class="all-projects">
                     <div class="project">
-                        <img src="/data/img/" alt="">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
+                    </div>
+                    <div class="project">
+                        <img src="/data/img/projets/meteo_mokaia_logo.png" alt="Météo Mokaia">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="c">
             <div class="top">
                 <div class="title">
                     <h1>Contact</h1>
@@ -169,9 +198,8 @@
             </div>
             <div class="main">
                 <div class="desc">
-                    <p>Voici quelques des projets que j'ai réalisé tout a long de mes deux années au sein de l’IUT de
-                        bordeaux, d'autres encore restent disponibles sur les differents répertoires de mon profil
-                        Github.</p>
+                    <p>Pour toutes informations supplémentaires concernant, je vous propose de bien vouloir utiliser mes
+                        coordonnées ci-dessous. Je suis joignable à tout moment par e-mail et téléphone.</p>
                 </div>
                 <div class="row-contact">
                     <div class="details">
@@ -180,6 +208,7 @@
                                 <img src="/data/img/icon/location.png" alt="Localisation">
                             </div>
                             <div class="value">
+                                <h1>Ville :</h1>
                                 <p>Bordeaux</p>
                             </div>
                         </div>
@@ -188,6 +217,7 @@
                                 <img src="/data/img/icon/letter.png" alt="Mail">
                             </div>
                             <div class="value">
+                                <h1>Email :</h1>
                                 <p>william.tchang.pro@gmail.com</p>
                             </div>
                         </div>
@@ -196,6 +226,7 @@
                                 <img src="/data/img/icon/smartphone-call.png" alt="Mobile">
                             </div>
                             <div class="value">
+                                <h1>Mobile : </h1>
                                 <p>07.89.08.68.35</p>
                             </div>
                         </div>
@@ -204,14 +235,15 @@
                                 <img src="/data/img/icon/linkedin.png" alt="Linkedin">
                             </div>
                             <div class="value">
-                                william-tchang-429103291
+                                <h1>Linkedin :</h1>
+                                <p>william-tchang-429103291</p>
                             </div>
                         </div>
                     </div>
                     <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1415.6684901199774!2d-0.614266250362936!3d44.79432068568082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d896467584a5%3A0x38546aca60f18739!2s20%20Av.%20de%20Bardanac%2C%2033600%20Pessac!5e0!3m2!1sfr!2sfr!4v1703709546329!5m2!1sfr!2sfr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

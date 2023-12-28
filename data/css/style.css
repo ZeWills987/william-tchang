@@ -1,0 +1,305 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 0 10px;
+    padding: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+header .top {
+    width: 100%;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top .logo {
+    margin: 10px 0;
+}
+
+header .top .name h2 {
+    margin: 0 0 10px 0;
+    font-size: x-large;
+}
+
+header .top .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+header .top .social {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.social>div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top>div>div>a>img {
+    width: 30px;
+}
+
+header .middle {
+    width: 100%;
+    flex: 6;
+}
+
+header .middle nav {
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .middle nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .middle nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header .middle nav ul li a {
+    margin: 0px;
+    padding: 10px 0 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+header .middle nav ul li a:hover {
+    background-color: #28282843;
+}
+
+header .middle nav ul li a div {
+    display: flex;
+}
+
+header .middle nav ul li a div p {
+    margin: 0;
+}
+
+header .middle nav ul li a .icon>img {
+    margin: 0 10px 0 0;
+    width: 30px;
+}
+
+header .bottom {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+header .bottom p a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    margin-left: 320px;
+    padding: 0;
+    height: 1000px;
+    overflow: auto;
+}
+
+main>div {
+    overscroll-behavior: contain;
+    height: 100vh;
+}
+
+main>div .top {
+    display: flex;
+    flex-direction: row;
+}
+
+main>div .top>div:nth-child(1) {
+    flex: 5;
+    display: flex;
+}
+
+main>div .top .dwn-cv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>div .top .dwn-cv a {
+    margin: 10px 0 0 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28282843;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+main>div .presentation {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div .presentation .name h1 {
+    margin: 0;
+    font-size: 5vw;
+}
+
+main div .presentation .desc p {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+main>div .top .title h1 {
+    margin: 0;
+    font-size: 4vw;
+}
+
+main .aboutme .main {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .aboutme .main .photo img {
+    width: 400px;
+}
+
+main .aboutme .main .block {
+    display: flex;
+    flex-direction: row;
+}
+
+main .aboutme .main .block .desc {
+    margin: 0 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .aboutme .main .block .desc p {
+    font-size: large;
+    font-weight: 400;
+}
+
+.portfolio .main .all-projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .main .all-projects .project {
+    margin: 10px 10px 0 0;
+    background-color: #c6c6c643;
+}
+
+.portfolio .main .all-projects .project .description {
+    display: none;
+}
+
+.portfolio .main .all-projects .project>img {
+    width: 250px;
+    height: 250px;
+}
+
+.contact .main .row-contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact .main .row-contact>div {
+    margin: 10px 10px;
+    flex: 1;
+}
+
+.contact .main .row-contact .details {
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contact .main .row-contact .details .row-details {
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact .main .row-contact .details .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .main .row-contact .details .icon img {
+    margin: 0 20px 0 0;
+    width: 40px;
+    height: 40px;
+}
+
+.contact .main .row-contact .details .value {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .main .row-contact .details .value h1 {
+    margin: 0;
+}
+
+.contact .main .row-contact .details .value p {
+    margin: 0;
+    font-size: large;
+    font-weight: 500;
+}
+
+.contact .main .row-contact .map {
+    width: 80%;
+}
