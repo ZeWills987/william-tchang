@@ -1,5 +1,7 @@
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+*/
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,6 +12,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* Barre de naviguation */
 
 header {
     margin: 0 10px;
@@ -102,10 +106,12 @@ header .middle nav ul li a {
     align-items: center;
     text-decoration: none;
     color: #000;
+    transition: 0.5s;
 }
 
 header .middle nav ul li a:hover {
-    background-color: #28282843;
+    background-color: #b1b1b143;
+    transition: 0.5s;
 }
 
 header .middle nav ul li a div {
@@ -134,19 +140,34 @@ header .bottom p a {
     color: #000;
 }
 
+/* Contenue principal */
+
 main {
-    margin-left: 320px;
+    margin-left: 340px;
     padding: 0;
     height: 1000px;
-    overflow: auto;
+    overflow-y: none;
+    overflow-x: none;
+}
+
+main>div:nth-child(1) {
+    padding: 0;
 }
 
 main>div {
-    overscroll-behavior: contain;
+    margin: 0 0 50px 0;
+    padding: 40px 0 0 0;
     height: 100vh;
 }
 
+/* Titre */
+
+main>div:nth-child(1) .top {
+    margin: 0;
+}
+
 main>div .top {
+    margin: 0 0 50px 0;
     display: flex;
     flex-direction: row;
 }
@@ -155,6 +176,18 @@ main>div .top>div:nth-child(1) {
     flex: 5;
     display: flex;
 }
+
+main>div .top .title h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+main>div .top .main .desc p {
+    font-size: large;
+    font-weight: 400;
+}
+
+/* Boutton tléchargement de CV */
 
 main>div .top .dwn-cv {
     flex: 1;
@@ -169,12 +202,21 @@ main>div .top .dwn-cv a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #28282843;
+    background-color: #a1a1a143;
     border-radius: 10px;
     text-decoration: none;
     color: #000;
     font-weight: 700;
+    transition: 0.5s;
 }
+
+main>div .top .dwn-cv a:hover {
+    transition: 0.5s;
+    background-color: #67676743;
+    color: #464646;
+}
+
+/* Présentaion personnelle */
 
 main>div .presentation {
     width: 100%;
@@ -196,13 +238,10 @@ main div .presentation .desc p {
     font-weight: 300;
 }
 
-main>div .top .title h1 {
-    margin: 0;
-    font-size: 4vw;
-}
+/* A propos de moi */
 
 main .aboutme .main {
-    height: 90%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,10 +264,12 @@ main .aboutme .main .block .desc {
     align-items: center;
 }
 
-main .aboutme .main .block .desc p {
+main>div .main .desc p {
     font-size: large;
     font-weight: 400;
 }
+
+/* Porfolio */
 
 .portfolio .main .all-projects {
     display: flex;
@@ -251,6 +292,8 @@ main .aboutme .main .block .desc p {
     width: 250px;
     height: 250px;
 }
+
+/* Contact */
 
 .contact .main .row-contact {
     display: flex;
