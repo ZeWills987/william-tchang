@@ -11,6 +11,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 /* Barre de naviguation */
@@ -34,6 +35,7 @@ header .top {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #000;
 }
 
 header .top>div {
@@ -175,8 +177,21 @@ header .bottom p a {
         height: max-content;
     }
 
+    body main>div .top .title h1 {
+        margin: 0 0 0 10px;
+        font-size: 9vw;
+    }
+
     html body main>div .top>div {
         flex: 1;
+    }
+
+    body main div .presentation .name h1 {
+        font-size: 8vw;
+    }
+
+    body main div .presentation .desc p {
+        font-size: 5vw;
     }
 
     body main .aboutme .main .block,
@@ -186,6 +201,12 @@ header .bottom p a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+
+    main>div .top .dwn-cv a {
+        width: max-content;
+        font-size: small;
     }
 
     main .aboutme .main .block .photo {
@@ -245,7 +266,8 @@ main>div:nth-child(1) {
     padding: 0;
 }
 
-main>div:nth-child(3) {
+main>div:nth-child(3),
+main>div:nth-child(4) {
     padding: 0 0 100px 0;
     height: max-content;
 }
@@ -260,17 +282,21 @@ main>div {
 
 main>div:nth-child(1) .top {
     margin: 0;
+    border-bottom: none;
 }
 
 main>div .top {
     margin: 0 0 50px 0;
+    width: 98%;
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid #000;
 }
 
 main>div .top>div:nth-child(1) {
     flex: 5;
     display: flex;
+    align-items: center;
 }
 
 main>div .top .title h1 {
@@ -292,8 +318,12 @@ main>div .top .dwn-cv {
     align-items: center;
 }
 
+main>div:nth-child(1) .top .dwn-cv {
+    margin: 10px 10px 0 0;
+}
+
 main>div .top .dwn-cv a {
-    margin: 10px 0 0 0;
+    margin: 0 10px 0 0;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -472,13 +502,10 @@ main>div .main .desc p {
     flex-direction: row;
 }
 
-.contact .main .row-contact>div {
-    margin: 10px 10px;
-    flex: 1;
-}
-
 .contact .main .row-contact .details {
+    margin: 10px 10px;
     padding: 40px;
+    width: 90%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
