@@ -1,18 +1,15 @@
 <div class="project">
     <div class="img">
-        <img src="/data/img/symfony.png" alt="Symfony Stream">
+        <img src="{{ asset(project.image) }}" alt="">
     </div>
     <div class="contenu">
-        <h1>Symfony Stream (2024)</h1>
-        <p>Site web intéractif permettant de critiquer des séries. Le site web dispose aussi d'une
-            partie réservé exclusivement au adminisatrateurs du site.</p>
-        <a href="/data/pdf/symfony.pdf">En savoir plus</a>
+        <h1>{{project.title}}</h1>
+        <p>{{project.extract}}</p>
+        <a href="{{ project.link }}">En savoir plus</a>
         <ul>
-            <li>PHP (Symfony)</li>
-            <li>API (OMDB)</li>
-            <li>Tailwind</li>
-            <li>Doctrine</li>
-            <li>SCRUM</li>
+            {% for skill in project.skills %}
+                <li>{{skill}}</li>
+            {% endfor %}
         </ul>
     </div>
 </div>

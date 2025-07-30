@@ -26,6 +26,10 @@
                 <td>{{ project.skills ? project.skills|join(', ') : '' }}</td>
             </tr>
             <tr>
+                <th>Image</th>
+                <td><img src="{{ asset(project.image) }}" alt=""></td>
+            </tr>
+            <tr>
                 <th>Link</th>
                 <td>{{ project.link }}</td>
             </tr>

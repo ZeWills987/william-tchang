@@ -30,6 +30,24 @@ final class ProjectController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $imageFile = $form->get('image')->getData();
+
+            if ($imageFile) {
+                // Génère un nom de fichier unique
+                $newFilename = uniqid().'.'.$imageFile->guessExtension();
+
+                // Déplace le fichier dans le dossier de ton choix (ex : 'public/uploads/')
+                $imageFile->move(
+                    $this->getParameter('uploads_directory'), // Paramétré dans config/services.yaml
+                    $newFilename
+                );
+
+                // Sauvegarde le chemin relatif ou absolu dans l'entité Project
+                $project->setImage('uploads/' . $newFilename);
+            }
+
+            var_dump($project);
+
             $entityManager->persist($project);
             $entityManager->flush();
 

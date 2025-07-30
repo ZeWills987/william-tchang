@@ -12,9 +12,6 @@
             <tr>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Description</th>
-                <th>Skills</th>
-                <th>Link</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,9 +20,6 @@
             <tr>
                 <td>{{ project.id }}</td>
                 <td>{{ project.title }}</td>
-                <td>{{ project.description }}</td>
-                <td>{{ project.skills ? project.skills|join(', ') : '' }}</td>
-                <td>{{ project.link }}</td>
                 <td>
                     <a href="{{ path('app_project_show', {'id': project.id}) }}">show</a>
                     <a href="{{ path('app_project_edit', {'id': project.id}) }}">edit</a>
