@@ -26,6 +26,12 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $link = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $extract = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +81,30 @@ class Project
     public function setLink(string $link): static
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): static
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getExtract(): ?string
+    {
+        return $this->extract;
+    }
+
+    public function setExtract(string $extract): static
+    {
+        $this->extract = $extract;
 
         return $this;
     }
