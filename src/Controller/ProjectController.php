@@ -46,8 +46,6 @@ final class ProjectController extends AbstractController
                 $project->setImage('uploads/' . $newFilename);
             }
 
-            var_dump($project);
-
             $entityManager->persist($project);
             $entityManager->flush();
 

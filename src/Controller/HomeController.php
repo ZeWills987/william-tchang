@@ -2,15 +2,22 @@
 
 namespace App\Controller;
 use App\Repository\ProjectRepository;
+use App\Repository\ParamsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+
 final class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home', methods: ['GET'])]
-    public function index(ProjectRepository $projectRepository): Response
+    public function index(ProjectRepository $projectRepository,ParamsRepository $paramsRepository): Response
     {
-        return $this->render('home/index.html.twig', ['projects'=>$projectRepository->findAll()]);
+
+
+        return $this->render('home/index.html.twig', [
+            'params' => $paramsRepository->findAll()[0],
+            'projects'=>$projectRepository->findAll()
+        ]);
     }
 }

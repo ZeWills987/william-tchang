@@ -6,6 +6,7 @@ use App\Entity\Project;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,7 +21,7 @@ class ProjectType extends AbstractType
             ->add('title', TextType::class, [
                 'label' => 'Titre du projet'
             ])
-            ->add('description', TextType::class, [
+            ->add('description', TextareaType::class, [
                 'label' => 'Description'
             ])
             ->add('skills', ChoiceType::class, [
@@ -50,7 +51,7 @@ class ProjectType extends AbstractType
                 'required' => false,
                 'mapped' => false,
             ])
-            ->add('extract', TextType::class, [
+            ->add('extract', TextareaType::class, [
                 'label' => 'Extrait',
                 'required' => false
             ])

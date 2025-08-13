@@ -1,0 +1,59 @@
+html,
+body {
+    font-family: $ff;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.caret {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.bg-highlight {
+    background-color: $secondary;
+    padding: 0 4px;
+    color: white;
+}
+
+.text-highlight {
+    padding: 0 4px;
+    color: $secondary;
+}
+
+.blur {
+    filter: blur(1px);
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.overflowx-hidden {
+    overflow-x: hidden;
+}

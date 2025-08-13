@@ -1,0 +1,23 @@
+.swiper {
+
+    .swiper-slide-prev {
+        filter: blur(2px);
+    }
+
+    @media screen and (max-width: $xxlarge) {
+        @include blur-after(6);
+    }
+
+    @media screen and (max-width: $xlarge) {
+        @include blur-after(4);
+    }
+
+    @media screen and (max-width: $large) {
+        @include blur-after(3);
+    }
+
+
+    @media screen and (max-width: $medium) {
+        @include blur-after(2);
+    }
+}

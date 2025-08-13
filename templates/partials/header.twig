@@ -1,82 +1,17 @@
+{% macro nav_item(route_name, label) %}
+    <li class="item {{ app.request.attributes.get('_route') == route_name ? 'active' : '' }}">
+        <a class="link" href="{{ path(route_name) }}">{{ label }}</a>
+    </li>
+{% endmacro %}
+
+{# Puis dans votre template #}
+{% import _self as macros %}
+
 <header>
-    <div class="top">
-        <div class="logo">
-            <img src="{{asset('image/icon/william_tchang_logo.png')}}" alt="Logo">
-        </div>
-        <div class="name">
-            <h2>William Tchang</h2>
-        </div>
-        <div class="social">
-            <div class="linkedin">
-                <a href="https://www.linkedin.com/in/william-tchang-429103291/">
-                    <img src="{{ asset('image/icon/linkedin.png') }}" alt="Linkedin">
-                </a>
-            </div>
-            <div class="github">
-                <a href="https://github.com/ZeWills987">
-                    <img src="{{ asset('image/icon/github.png') }}" alt="GitHub">
-                </a>
-            </div>
-            <div class="cv">
-                <a href="/data/pdf/CV_TCHANG_WIlliam.pdf" download>
-                    <img src="{{asset('image/icon/cv.png')}}" alt="CV">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="middle">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#h">
-                        <div class="icon">
-                            <img src="{{asset('image/icon/home.png')}}" alt="Home">
-                        </div>
-                        <div class="desc">
-                            <p>Accueil</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#a">
-                        <div class="icon">
-                            <img src="{{asset('image/icon/utilisateur.png')}}" alt="Home">
-                        </div>
-                        <div class="desc">
-                            <p>A Propos</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#p">
-                        <div class="icon">
-                            <img src="{{asset('image/icon/afficher-le-bouton-des-applications.png')}}" alt="Home">
-                        </div>
-                        <div class="desc">
-                            <p>Portfolio</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#c">
-                        <div class="icon">
-                            <img src="{{asset('image/icon/letter.png')}}" alt="Contact">
-                        </div>
-                        <div class="desc">
-                            <p>Contact</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="bottom">
-        <p>© 2023 par <a href="https://william-tchang.fr">William Tchang</a></p>
-    </div>
+    <ul class="nav-items">
+        {{ macros.nav_item('app_home', 'Home') }}
+        {{ macros.nav_item('app_about', 'About') }}
+        {{ macros.nav_item('app_work', 'Work') }}
+        {{ macros.nav_item('app_contact', 'Contact') }}
+    </ul>
 </header>

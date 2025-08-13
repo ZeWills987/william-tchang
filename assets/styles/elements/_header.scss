@@ -1,0 +1,37 @@
+header {
+    margin: 10px;
+    padding: 10px 20px;
+    width: max-content;
+    border: 1px solid $gray;
+    border-radius: 50px;
+    background-color: $secondary;
+
+    .nav-items {
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .item {
+        display: flex;
+
+        .link {
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: $primary;
+            text-transform: uppercase;
+        }
+
+        &.active .link {
+            background: linear-gradient(rgb(255, 146, 104) 0%, rgb(249, 92, 31) 100%);
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        &:hover {
+            .link {
+                opacity: 0.8;
+            }
+        }
+    }
+}

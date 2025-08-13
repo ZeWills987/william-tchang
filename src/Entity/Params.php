@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\HeaderRepository;
+use App\Repository\ParamsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: HeaderRepository::class)]
-class Header
+#[ORM\Entity(repositoryClass: ParamsRepository::class)]
+class Params
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -20,10 +20,10 @@ class Header
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $profile_photo = null;
+    private ?string $description = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $description = null;
+    private ?string $profile_photo = null;
 
     #[ORM\Column(length: 255)]
     private ?string $city = null;
@@ -31,11 +31,17 @@ class Header
     #[ORM\Column(length: 255)]
     private ?string $email = null;
 
-    #[ORM\Column]
-    private ?int $mobile = null;
+    #[ORM\Column(length: 255)]
+    private ?string $mobile = null;
 
     #[ORM\Column(length: 255)]
     private ?string $linkedin = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $cv = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $github = null;
 
     public function getId(): ?int
     {
@@ -66,18 +72,6 @@ class Header
         return $this;
     }
 
-    public function getProfilePhoto(): ?string
-    {
-        return $this->profile_photo;
-    }
-
-    public function setProfilePhoto(string $profile_photo): static
-    {
-        $this->profile_photo = $profile_photo;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -86,6 +80,18 @@ class Header
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getProfilePhoto(): ?string
+    {
+        return $this->profile_photo;
+    }
+
+    public function setProfilePhoto(string $profile_photo): static
+    {
+        $this->profile_photo = $profile_photo;
 
         return $this;
     }
@@ -114,12 +120,12 @@ class Header
         return $this;
     }
 
-    public function getMobile(): ?int
+    public function getMobile(): ?string
     {
         return $this->mobile;
     }
 
-    public function setMobile(int $mobile): static
+    public function setMobile(string $mobile): static
     {
         $this->mobile = $mobile;
 
@@ -134,6 +140,30 @@ class Header
     public function setLinkedin(string $linkedin): static
     {
         $this->linkedin = $linkedin;
+
+        return $this;
+    }
+
+    public function getCv(): ?string
+    {
+        return $this->cv;
+    }
+
+    public function setCv(string $cv): static
+    {
+        $this->cv = $cv;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(string $github): static
+    {
+        $this->github = $github;
 
         return $this;
     }
