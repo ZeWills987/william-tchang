@@ -1,0 +1,15 @@
+.home {
+    .presentation {
+        padding: 90px 0 20px 0;
+        background-color: $secondary;
+        border-radius: 50px;
+
+        p {
+            max-width: 700px;
+            text-align: center;
+            color: $primary;
+            opacity: 0.8;
+            line-height: 150%;
+        }
+    }
+}

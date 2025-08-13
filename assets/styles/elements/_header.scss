@@ -26,11 +26,13 @@ header {
             background: linear-gradient(rgb(255, 146, 104) 0%, rgb(249, 92, 31) 100%);
             border-radius: 50px;
             font-weight: 500;
+            transition: all 0.5 ease-out;
         }
 
-        &:hover {
+        &:hover:not(.active) {
             .link {
                 opacity: 0.8;
+                transition: all 0.5 ease-out;
             }
         }
     }

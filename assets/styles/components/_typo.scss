@@ -59,14 +59,17 @@ $title-sizes: (
 .page-title {
     @include title-style(30);
     color: $secondary;
+    text-align: center;
 }
 
 .page-title-white {
-    margin: 0;
-    @include title-style(75);
+    @include title-style(60);
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0px;
 }
 
-.section-title {
+.page .section-title {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;

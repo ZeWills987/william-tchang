@@ -3,8 +3,16 @@
 {% block title %} William Tchang | Portfolio {% endblock %}
 
 {% block body %}
-    <div class="layout-maxed">
-        
+    <div class="layout-maxed home">
+        <div class="flex flex-col align-items-center presentation">
+            <h1 class="page-title-white mb-30">Junior Software Developer <br> Based in Bordeaux</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, animi! Eius, est excepturi quod obcaecati quisquam, ducimus harum aspernatur sunt dicta beatae, mollitia voluptatibus quia saepe a dolor similique doloremque.</p>
+            <a href="{{path('app_contact')}}" class="btn-contact mt-40"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
+            <div class="grid grid-cols-2 gap-20">
+                <div class="card-project"></div>
+                <div class="card-project"></div>
+            </div>
+        </div>
     </div>
     <script src="/data/js/script.js"></script>
 {% endblock %}
