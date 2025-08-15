@@ -77,6 +77,24 @@ $title-sizes: (
     font-family: Inter, sans-serif;
 }
 
+.title-section {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 7.2px;
+    color: $secondary;
+    opacity: 0.4 !important;
+}
+
+.title-section-white {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 7.2px;
+    font-weight: 400;
+    color: $secondary;
+    opacity: 0.6 !important;
+    color: $primary;
+}
+
 .subtitle {
     font-size: 16px;
     line-height: 22px;
@@ -86,43 +104,11 @@ $title-sizes: (
     text-overflow: ellipsis;
     white-space: nowrap;
     text-wrap: nowrap;
-
 }
 
-.card-title {
-    padding: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: $secondary;
-    font-weight: 500;
-    font-family: $ff-manrope;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-wrap: nowrap;
-
-
-    &:hover {
-        opacity: 0.7;
-        cursor: pointer;
-    }
-
-}
-
-.card-descrition {
+.title-card {
     margin: 0;
-    padding: 0;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary;
-    opacity: 0.7;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-wrap: nowrap;
-
-    &:hover {
-        opacity: 0.4;
-        cursor: pointer;
-    }
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
 }

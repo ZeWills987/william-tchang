@@ -42,3 +42,53 @@
         }
     }
 }
+
+.btn-more {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    border-radius: 30px;
+    transition:
+        padding-left 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    position: relative;
+    overflow: hidden;
+
+    svg {
+        width: 35px;
+        height: 35px;
+        stroke: $orange;
+        border: none;
+    }
+
+    &::before {
+        content: "Learn more";
+        width: 0;
+        height: 30px;
+        color: $orange;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+        transition:
+            width 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+            right 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+        right: -145px;
+        position: relative;
+    }
+
+    &:hover {
+        padding-left: 20px;
+        transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+
+        &::before {
+            width: 115px;
+            transition:
+                width 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+                right 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+            right: 0;
+            position: relative;
+
+        }
+    }
+}

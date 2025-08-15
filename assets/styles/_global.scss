@@ -57,3 +57,21 @@ a {
 .overflowx-hidden {
     overflow-x: hidden;
 }
+
+@for $i from 1 through 10 {
+    .fade-in-#{$i} {
+        animation: fadeIn #{$i * 0.5}s ease forwards;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,61 @@
+.card-branding-project {
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        object-fit: cover;
+        filter: brightness(0.5);
+        transition: filter 0.3s ease-out;
+    }
+
+    .content {
+        padding: 30px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        backdrop-filter: blur(1px);
+        border-radius: 30px;
+        // background-color: #000000d8;
+    }
+
+    &:hover {
+        img {
+            filter: brightness(0.6);
+            transition: filter 0.3s ease-in;
+        }
+    }
+}
+
+.card-project {
+    border-radius: 30px;
+    position: relative;
+
+    img {
+        border-radius: 30px;
+        filter: brightness(0.9);
+    }
+
+    .content {
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    svg {
+        width: 35px;
+        height: 35px;
+        stroke: $orange;
+        border: none;
+    }
+}
