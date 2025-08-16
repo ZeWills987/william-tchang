@@ -5,7 +5,7 @@
 {% block body %}
     <div class="layout-maxed home">
         <div class="presentation mb-70">
-            <h1 class="page-title-white mb-30 fade-in-1">William TCHANG<br> Software Developer</h1>
+            <h1 class="page-title-white mb-30 fade-in-1">William TCHANG<br> Web Developer</h1>
             <p class="page-description fade-in-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, animi! Eius, est excepturi quod obcaecati quisquam, ducimus harum aspernatur sunt dicta beatae, mollitia voluptatibus quia saepe a dolor similique doloremque.</p>
             <a href="{{path('app_contact')}}" class="btn-contact fade-in-3 mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
             <div class="grid grid-cols-2 gap-20">
@@ -41,13 +41,15 @@
         </div>
 
         <div class="projects">
-            <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING</h3>
-            <h2 data-aos="fade-up">SOFTWARE DEVELOPER</h2>
-            <h2 data-aos="fade-up">SOFTWARE DEVELOPER</h2>
-            <h2 data-aos="fade-up">SOFTWARE DEVELOPER</h2>
+            <div class="top">
+                <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING</h3>
+                <h2 data-aos="fade-up">SOFTWARE DEVELOPER</h2>
+                <h2 data-aos="fade-up">UI/UX DESIGN</h2>
+                <h2 data-aos="fade-up">DEVELOPMENT</h2>
+            </div>
             <div class="swiper-projects mt-30">
                 <div class="flex justify-between">
-                    <h3 data-aos="fade-up" class="title-section-white m-0">SLECTED PROJECT</h3>
+                    <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
                     <div data-aos="fade-up" class="next-prev">
                         <div class="swiper-button-prev">
                         </div>
@@ -60,12 +62,20 @@
                         <div class="card-project">
                             <img src="{{ asset('image/symfo-stream.png') }}" alt="">
                             <div class="content">
-                                <h3>01/04</h3>
-                                <div class="">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
                                     <div class="content-text">
-                                        <div class="flex flex-col gap-10">
-                                            <h3>Project</h3>
-
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
                                         </div>
                                     </div>
                                     <a href="" class="btn-link">
@@ -79,12 +89,47 @@
                         <div class="card-project">
                             <img src="{{ asset('image/symfo-stream.png') }}" alt="">
                             <div class="content">
-                                <h3>02/04</h3>
-                                <div class="">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
                                     <div class="content-text">
-                                        <div class="flex flex-col gap-10">
-                                            <h3>Project</h3>
-
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="swiper-slide">
+                        <div class="card-project">
+                            <img src="{{ asset('image/symfo-stream.png') }}" alt="">
+                            <div class="content">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
+                                    <div class="content-text">
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
                                         </div>
                                     </div>
                                     <a href="" class="btn-link">
@@ -95,6 +140,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>

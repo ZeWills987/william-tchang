@@ -11746,6 +11746,7 @@ body:has(dialog[open]) {
   letter-spacing: 7.2px;
   color: #131315;
   opacity: 0.4 !important;
+  font-family: "General Sans", sans-serif;
 }
 
 .title-section-white {
@@ -11756,6 +11757,7 @@ body:has(dialog[open]) {
   color: #131315;
   opacity: 0.6 !important;
   color: #fff;
+  font-family: "General Sans", sans-serif;
 }
 
 .subtitle {
@@ -12286,6 +12288,66 @@ body:has(dialog[open]) {
   }
 }
 
+.next-prev,
+.swiper-button-prev,
+.swiper-button-next {
+  margin: 0 !important;
+  position: static;
+  color: #fff;
+}
+
+.swiper-projects .next-prev {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.swiper-projects .next-prev .swiper-button-prev,
+.swiper-projects .next-prev .swiper-button-next {
+  padding: 5px;
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.swiper-projects .next-prev .swiper-button-prev::after,
+.swiper-projects .next-prev .swiper-button-next::after {
+  font-size: 15px;
+  color: #fff;
+}
+.swiper-projects .next-prev .swiper-button-prev::after {
+  margin-right: 2px;
+}
+.swiper-projects .next-prev .swiper-button-next::after {
+  margin-left: 2px;
+}
+.swiper-projects .swiper-pagination {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.swiper-projects .swiper-pagination-bullet-active {
+  color: #fff !important;
+}
+
 .card-branding-project {
   width: 100%;
   border-radius: 30px;
@@ -12313,6 +12375,14 @@ body:has(dialog[open]) {
   backdrop-filter: blur(1px);
   border-radius: 30px;
 }
+.card-branding-project .content .title-card {
+  padding: 20px;
+  background-color: rgba(19, 19, 21, 0.5);
+  --tw-backdrop-blur: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  border-radius: 10px;
+}
 .card-branding-project:hover img {
   -webkit-filter: brightness(0.6);
           filter: brightness(0.6);
@@ -12327,12 +12397,20 @@ body:has(dialog[open]) {
   position: relative;
 }
 .card-project img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
   border-radius: 30px;
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  -webkit-transition: all 0.5 ease-in;
+  transition: all 0.5 ease-in;
 }
 .card-project .content {
-  padding: 40px;
+  padding: 40px 10px 10px 10px;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -12349,11 +12427,65 @@ body:has(dialog[open]) {
   top: 0;
   left: 0;
 }
+.card-project .content .bottom {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  border-radius: 10px;
+}
+.card-project .content .content-text {
+  padding: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgba(19, 19, 21, 0.5);
+  --tw-backdrop-blur: blur(24px);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+}
+.card-project .content .content-text .item {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #fff;
+}
 .card-project svg {
-  width: 35px;
-  height: 35px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
   stroke: rgb(255, 115, 37);
   border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.card-project svg:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.card-project:hover img {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transition: all 0.5 ease-in;
+  transition: all 0.5 ease-in;
 }
 
 .home .presentation {
@@ -12406,70 +12538,54 @@ body:has(dialog[open]) {
   gap: 30px;
   overflow: hidden;
 }
-.home .projects > .title-section-white,
-.home .projects h2 {
+.home .projects .top {
   width: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.home .projects h2 {
-  font-size: 94px;
-  line-height: 100%;
-  font-weight: 500;
-}
-.home .projects .next-prev,
-.home .projects .swiper-button-prev,
-.home .projects .swiper-button-next {
-  margin: 0 !important;
-  position: static;
-  color: #fff;
-}
-.home .projects .next-prev {
+.home .projects .top .title-section-white,
+.home .projects .top h2 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px;
+  text-align: center;
+  cursor: default;
 }
-.home .projects .next-prev .swiper-button-prev,
-.home .projects .next-prev .swiper-button-next {
-  padding: 5px;
-  width: 44px;
-  height: 44px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+.home .projects .top h2 {
+  font-size: 94px;
+  line-height: 100%;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.home .projects .next-prev .swiper-button-prev::after,
-.home .projects .next-prev .swiper-button-next::after {
-  font-size: 15px;
-  color: #fff;
+.home .projects .top h2:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.home .projects .next-prev .swiper-button-prev::after {
-  margin-right: 2px;
+.home .projects .top h2:hover:nth-child(even) {
+  -webkit-transform: translateX(75px);
+          transform: translateX(75px);
 }
-.home .projects .next-prev .swiper-button-next::after {
-  margin-left: 2px;
+.home .projects .top h2:hover:nth-child(odd) {
+  -webkit-transform: translateX(-75px);
+          transform: translateX(-75px);
 }
 .home .projects .swiper-projects {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
+  position: relative;
 }
 
 /* - - - -    Z-index Element Priority    - - - -  */

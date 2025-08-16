@@ -70,8 +70,7 @@ var swiper = new Swiper(".swiper-projects", {
     spaceBetween: 30,
     loop: true,
     autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+        delay: 5000,
     },
     navigation: {
         nextEl: ".swiper-button-next",

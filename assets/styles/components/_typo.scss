@@ -83,6 +83,8 @@ $title-sizes: (
     letter-spacing: 7.2px;
     color: $secondary;
     opacity: 0.4 !important;
+    font-family: "General Sans", sans-serif;
+
 }
 
 .title-section-white {
@@ -93,6 +95,7 @@ $title-sizes: (
     color: $secondary;
     opacity: 0.6 !important;
     color: $primary;
+    font-family: "General Sans", sans-serif;
 }
 
 .subtitle {

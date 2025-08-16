@@ -21,3 +21,55 @@
         @include blur-after(2);
     }
 }
+
+.next-prev,
+.swiper-button-prev,
+.swiper-button-next {
+    margin: 0 !important;
+    position: static;
+    color: $primary;
+}
+
+.swiper-projects {
+    .next-prev {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            padding: 5px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 15px;
+            color: $primary;
+        }
+
+        .swiper-button-prev::after {
+            margin-right: 2px;
+        }
+
+        .swiper-button-next::after {
+            margin-left: 2px;
+        }
+    }
+
+    .swiper-pagination {
+        width: max-content;
+    }
+
+    .swiper-pagination-bullet-active {
+        color: $white !important;
+    }
+}
