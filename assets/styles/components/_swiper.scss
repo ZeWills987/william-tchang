@@ -66,10 +66,21 @@
     }
 
     .swiper-pagination {
+        padding: 5px;
         width: max-content;
-    }
+        left: calc(50% - 48px);
+        background-color: rgba($secondary, 0.5);
+        --tw-backdrop-blur: blur(5px);
+        backdrop-filter: blur(5px);
+        border: 1px solid #ffffff26;
+        border-radius: 50px;
 
-    .swiper-pagination-bullet-active {
-        color: $white !important;
+        .swiper-pagination-bullet {
+            background-color: rgba($color: $white, $alpha: 0.8);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $white !important;
+        }
     }
 }
