@@ -1,17 +1,29 @@
-<footer>
-    <h2 class="footer-title mb-30">Have a Cool <br> Project</h2>
-    <a href="" class="btn-more">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </a>
+<footer class="layout-maxed justify-center">
+    <h2 data-aos="fade-up"  class="footer-title mb-30">Have a Cool <br> Project</h2>
+    <div class="flex justify-center">
+        <a data-aos="fade-up" href="{{path('app_contact')}}" class="btn-contact mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
+    </div>
     <hr>
     <div class="flex justify-between">
         <div class="me">
-            <img src="" alt="">
-            <h3></h3>
+            <img data-aos="fade-up" src="{{ asset('image/me.jpg') }}" alt="" class="avatar fade-in-scroll">
+            <h3 data-aos="fade-up" class="title-me">Web Developper <br> based in Bordeaux</h3>
         </div>
         <div class="footer-nav">
-
+            <ul data-aos="fade-up">
+                <h3 class="title-me">Naviguation</h3>
+                <li><a href="{{path('app_home')}}">Home</a></li>
+                <li><a href="{{path('app_about')}}">About</a></li>
+                <li><a href="{{path('app_work')}}">Work</a></li>
+            </ul>
+            <ul data-aos="fade-up">
+                <h3 class="title-me">Sociel Media</h3>
+                <li><a target="_blank" href="https://gitlab.com/williamtchang4">Gitlab</a></li>
+                <li><a target="_blank" href="https://github.com/ZeWills987">Github</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/william-tchang-raimana/">Linkedin</a></li>
+            </ul>
         </div>
-        <hr>
     </div>
+    <hr>
+    <p class="copyright pt-30">©{{"now"|date("Y") }} by William TCHANG. All right reserved.</p>
 </footer>

@@ -4,9 +4,36 @@ footer {
     background-color: $secondary;
 
     .footer-title {
+        text-align: center;
         font-size: 94px;
         line-height: 100%;
         font-weight: 600;
+    }
+
+    .me {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .avatar {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: left center;
+        }
+
+        .title-me {
+            font-family: General Sans, sans-serif;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 600;
+        }
+    }
+
+    hr {
+        border-color: rgba($white, 0.4);
     }
 
     .footer-nav {
@@ -14,5 +41,35 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 50px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+
+            .title-me {
+                margin: 0;
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 600;
+            }
+
+            li {
+                margin: 0;
+
+                a {
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-weight: 500;
+                    color: rgba($white, 0.7);
+                }
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        color: rgba($white, 0.5);
     }
 }

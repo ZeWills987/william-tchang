@@ -11183,7 +11183,10 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #fff;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 html {
@@ -11360,9 +11363,39 @@ footer {
   background-color: #131315;
 }
 footer .footer-title {
+  text-align: center;
   font-size: 94px;
   line-height: 100%;
   font-weight: 600;
+}
+footer .me {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+footer .me .avatar {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
+}
+footer .me .title-me {
+  font-family: General Sans, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+footer hr {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 footer .footer-nav {
   display: -webkit-box;
@@ -11375,6 +11408,38 @@ footer .footer-nav {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+}
+footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .footer-nav ul .title-me {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+footer .footer-nav ul li {
+  margin: 0;
+}
+footer .footer-nav ul li a {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .copyright {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-contact {
@@ -12409,7 +12474,7 @@ body:has(dialog[open]) {
   border-radius: 30px;
 }
 .card-branding-project .content .title-card {
-  padding: 20px;
+  padding: 10px 15px;
   background-color: rgba(19, 19, 21, 0.5);
   --tw-backdrop-blur: blur(5px);
   backdrop-filter: blur(5px);
@@ -12546,8 +12611,9 @@ body:has(dialog[open]) {
 .home .about-me {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[2];
+  -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 .home .about-me .avatar {
   width: 230px;
@@ -12619,6 +12685,12 @@ body:has(dialog[open]) {
           justify-content: center;
   gap: 30px;
   position: relative;
+}
+@media screen and (max-width: 992px) {
+  .home .about-me {
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 /* - - - -    Z-index Element Priority    - - - -  */
