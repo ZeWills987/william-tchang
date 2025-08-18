@@ -1,20 +1,121 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AboutController!{% endblock %}
+{% block title %}About William{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="layout-maxed home">
+        <div class="about-me my-70">
+            <div class="flex flex-col justify-between">
+                <h2 data-aos="fade-up" class="title-section">ABOUT ME</h2>
+                <img data-aos="fade-up" src="{{ asset('image/me.jpg') }}" alt="" class="avatar fade-in-scroll">
+            </div>
+            <h3 data-aos="fade-up" class="fade-in-scroll">
+                Hi I’m William and I am passionate about everything that has to do with App Developpement and Web. I enjoy working with agencies and enthusiastic people who want to solve problems through beautiful designs and experiences.
+            </h3>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/William Tchang/Desktop/perso/Portfolio/william-tchang/src/Controller/AboutController.php</code></li>
-        <li>Your template at <code>C:/Users/William Tchang/Desktop/perso/Portfolio/william-tchang/templates/about/index.html.twig</code></li>
-    </ul>
-</div>
+        <div class="projects mb-70">
+            <div class="top">
+                <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING</h3>
+                <h2 data-aos="fade-up">SOFTWARE DEVELOPER</h2>
+                <h2 data-aos="fade-up">UI/UX DESIGN</h2>
+                <h2 data-aos="fade-up">DEVELOPMENT</h2>
+            </div>
+            <div class="swiper-projects mt-30">
+                <div class="flex justify-between">
+                    <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
+                    <div data-aos="fade-up" class="next-prev">
+                        <div class="swiper-button-prev">
+                        </div>
+                        <div class="swiper-button-next">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    <div data-aos="fade-up" class="swiper-slide">
+                        <div class="card-project">
+                            <img src="{{ asset('image/symfo-stream.png') }}" alt="">
+                            <div class="content">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
+                                    <div class="content-text">
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="swiper-slide">
+                        <div class="card-project">
+                            <img src="{{ asset('image/symfo-stream.png') }}" alt="">
+                            <div class="content">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
+                                    <div class="content-text">
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="swiper-slide">
+                        <div class="card-project">
+                            <img src="{{ asset('image/symfo-stream.png') }}" alt="">
+                            <div class="content">
+                                <h3 class="title-section-white">01/04</h3>
+                                <div class="bottom">
+                                    <div class="content-text">
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">PROJECT</h3>
+                                            <h3 class="item">Symfo-Strem</h3>
+                                            <h3 class="item">Search/Discover</h3>
+                                            <h3 class="item">Films & Series</h3>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="title-section-white">TYPE</h3>
+                                            <h3 class="item">Student Project</h3>
+                                            <h3 class="item">Web Developpement</h3>
+                                            <h3 class="item">Web Site</h3>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

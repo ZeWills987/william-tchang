@@ -1,0 +1,48 @@
+    .projects {
+        padding: 90px 40px 40px 40px;
+        display: grid;
+        background-color: $secondary;
+        border-radius: 50px;
+        gap: 30px;
+        overflow: hidden;
+
+        .top {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title-section-white,
+            h2 {
+                width: max-content;
+                text-align: center;
+                cursor: default;
+            }
+
+            h2 {
+                font-size: 94px;
+                line-height: 100%;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    &:nth-child(even) {
+                        transform: translateX(75px);
+                    }
+
+                    &:nth-child(odd) {
+                        transform: translateX(-75px);
+                    }
+
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        .swiper-projects {
+            display: grid;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+        }
+    }

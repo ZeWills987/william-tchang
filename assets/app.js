@@ -80,3 +80,11 @@ var swiper = new Swiper(".swiper-projects", {
         el: ".swiper-pagination",
     },
 });
+
+const header = document.querySelector("header");
+const menu = header.querySelector('.nav-items');
+let burger_btn = header.querySelector('svg');
+
+burger_btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});

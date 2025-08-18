@@ -1,0 +1,25 @@
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+
+    .avatar {
+        width: 230px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    h3 {
+        color: $secondary;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width:$medium) {
+    .about-me {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

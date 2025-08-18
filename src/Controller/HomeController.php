@@ -14,7 +14,6 @@ final class HomeController extends AbstractController
     public function index(ProjectRepository $projectRepository,ParamsRepository $paramsRepository): Response
     {
 
-
         return $this->render('home/index.html.twig', [
             'params' => $paramsRepository->findAll()[0],
             'projects'=>$projectRepository->findAll()

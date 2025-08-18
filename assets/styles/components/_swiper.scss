@@ -28,6 +28,7 @@
     margin: 0 !important;
     position: static;
     color: $primary;
+    z-index: 1 !important;
 }
 
 .swiper-projects {
@@ -74,6 +75,7 @@
         backdrop-filter: blur(5px);
         border: 1px solid #ffffff26;
         border-radius: 50px;
+        z-index: 2 !important;
 
         .swiper-pagination-bullet {
             background-color: rgba($color: $white, $alpha: 0.8);
