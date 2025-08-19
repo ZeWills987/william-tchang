@@ -1,44 +1,47 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
-{% block title %}Project{% endblock %}
+{% block title %}Project {{ project.title }} {% endblock %}
 
 {% block body %}
-    {% block header %}
-    {% endblock %}
-    <h1>Project</h1>
+    <div class="layout-maxed project-page show">
+        <div class="bg-dark px-20 py-30 mb-70 all-projects">
+            <h1>Project : {{project.title}}</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ project.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ project.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ project.description }}</td>
-            </tr>
-            <tr>
-                <th>Skills</th>
-                <td>{{ project.skills ? project.skills|join(', ') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td><img src="{{ asset(project.image) }}" alt=""></td>
-            </tr>
-            <tr>
-                <th>Link</th>
-                <td>{{ project.link }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ project.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{ project.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ project.description }}</td>
+                    </tr>
+                    <tr>
+                        <th>Skills</th>
+                        <td>{{ project.skills ? project.skills|join(', ') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Image</th>
+                        <td><img src="{{ asset(project.image) }}" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th>Link</th>
+                        <td>{{ project.link }}</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <a href="{{ path('app_project_index') }}">back to list</a>
 
-    <a href="{{ path('app_project_edit', {'id': project.id}) }}">edit</a>
+            <a class="btn" href="{{ path('app_project_edit', {'id': project.id}) }}">EDIT</a>
 
-    {{ include('project/_delete_form.html.twig') }}
+            <a class="btn-back" href="{{ path('app_project_index') }}">BACK TO LIST</a>
+
+            {{ include('project/_delete_form.html.twig') }}
+        </div>
+    </div>
 {% endblock %}

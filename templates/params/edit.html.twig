@@ -1,15 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 {% block title %}Edit Params{% endblock %}
 
+
 {% block body %}
-    {% block header %}
-    {% endblock %}
-    <h1>Edit Params</h1>
+    <div class="layout-maxed params-page edit">
+        <div class="bg-dark px-20 py-30 mb-70 all-params">
+            <h1>Edit Params</h1>
+            {{ include('params/_form.html.twig', {'button_label': 'UPADTE'}) }}
 
-    {{ include('params/_form.html.twig', {'button_label': 'Update'}) }}
+            <a class="btn-back" href="{{ path('app_params_index') }}">BACK TO LIST</a>
 
-    <a href="{{ path('app_params_index') }}">back to list</a>
-
-    {{ include('params/_delete_form.html.twig') }}
+            {# {{ include('params/_delete_form.html.twig') }} #}
+        </div>
+    </div>
 {% endblock %}

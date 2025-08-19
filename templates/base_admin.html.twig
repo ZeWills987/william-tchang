@@ -21,7 +21,7 @@
         {% block header %}
             <div class="layout-maxed" style="position:sticky;top:0;z-index:10;">
                 <div class="flex md:grid justify-center">
-                    {{ include('/partials/header.twig') }}
+                    {{ include('/partials/header_admin.twig') }}
                 </div>
             </div>
         {% endblock %}
@@ -29,7 +29,6 @@
             
         {% endblock %}
         {% block footer %}
-            {{ include('/partials/footer.twig') }}
         {% endblock %}
         {# AOS #}
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

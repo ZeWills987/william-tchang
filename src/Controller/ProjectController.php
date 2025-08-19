@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('/project')]
+#[Route('/admin/project')]
 final class ProjectController extends AbstractController
 {
     #[Route(name: 'app_project_index', methods: ['GET'])]
@@ -33,16 +33,11 @@ final class ProjectController extends AbstractController
             $imageFile = $form->get('image')->getData();
 
             if ($imageFile) {
-                // Génère un nom de fichier unique
                 $newFilename = uniqid().'.'.$imageFile->guessExtension();
-
-                // Déplace le fichier dans le dossier de ton choix (ex : 'public/uploads/')
                 $imageFile->move(
-                    $this->getParameter('uploads_directory'), // Paramétré dans config/services.yaml
+                    $this->getParameter('uploads_directory'),
                     $newFilename
                 );
-
-                // Sauvegarde le chemin relatif ou absolu dans l'entité Project
                 $project->setImage('uploads/' . $newFilename);
             }
 

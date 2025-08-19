@@ -1,13 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 {% block title %}New Project{% endblock %}
 
 {% block body %}
-    {% block header %}
-    {% endblock %}
-    <h1>Create new Project</h1>
+    <div class="layout-maxed project-page">
+        <div class="bg-dark px-20 py-30 mb-70 all-projects">
+            <h1>Create new Project</h1>
 
-    {{ include('project/_form.html.twig') }}
+            {{ include('project/_form.html.twig') }}
 
-    <a href="{{ path('app_project_index') }}">back to list</a>
+            <a class="btn-back" href="{{ path('app_project_index') }}">BACK TO LIST</a>
+        </div>
+    </div>
 {% endblock %}

@@ -1,55 +1,41 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 {% block title %}Params index{% endblock %}
 
 {% block body %}
-    {% block header %}
-    {% endblock %}
-    <h1>Params index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Firstname</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Profile_photo</th>
-                <th>City</th>
-                <th>Email</th>
-                <th>Mobile</th>
-                <th>Linkedin</th>
-                <th>Cv</th>
-                <th>Github</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for param in params %}
-            <tr>
-                <td>{{ param.id }}</td>
-                <td>{{ param.firstname }}</td>
-                <td>{{ param.name }}</td>
-                <td>{{ param.description }}</td>
-                <td>{{ param.profilePhoto }}</td>
-                <td>{{ param.city }}</td>
-                <td>{{ param.email }}</td>
-                <td>{{ param.mobile }}</td>
-                <td>{{ param.linkedin }}</td>
-                <td>{{ param.cv }}</td>
-                <td>{{ param.github }}</td>
-                <td>
-                    <a href="{{ path('app_params_show', {'id': param.id}) }}">show</a>
-                    <a href="{{ path('app_params_edit', {'id': param.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="12">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_params_new') }}">Create new</a>
+    <div class="layout-maxed params-page  index">
+        <div class="bg-dark px-20 py-30 mb-70 all-params">
+            <h1>Params index</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Firstname</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for param in params %}
+                    <tr>
+                        <td>{{ param.id }}</td>
+                        <td>{{ param.firstname }}</td>
+                        <td>{{ param.name }}</td>
+                        <td>{{ param.city }}</td>
+                        <td class="actions">
+                            <a href="{{ path('app_params_show', {'id': param.id}) }}">Show</a>
+                            <a href="{{ path('app_params_edit', {'id': param.id}) }}">Edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="12">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {# <a href="{{ path('app_params_new') }}">Create new</a> #}
+        </div>
+    </div>
 {% endblock %}

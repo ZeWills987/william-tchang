@@ -1,64 +1,65 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 {% block title %}Params{% endblock %}
 
 {% block body %}
-    {% block header %}
-    {% endblock %}
-    <h1>Params</h1>
+    <div class="layout-maxed params-page show">
+        <div class="bg-dark px-20 py-30 mb-70 all-params">
+            <h1>Params</h1>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ param.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Firstname</th>
+                        <td>{{ param.firstname }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ param.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ param.description }}</td>
+                    </tr>
+                    <tr>
+                        <th>Profile_photo</th>
+                        <td><img src="{{ asset(param.profilePhoto) }}" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th>City</th>
+                        <td>{{ param.city }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ param.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td>{{ param.mobile }}</td>
+                    </tr>
+                    <tr>
+                        <th>Linkedin</th>
+                        <td>{{ param.linkedin }}</td>
+                    </tr>
+                    <tr>
+                        <th>Cv</th>
+                        <td>{{ param.cv }}</td>
+                    </tr>
+                    <tr>
+                        <th>Github</th>
+                        <td>{{ param.github }}</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ param.id }}</td>
-            </tr>
-            <tr>
-                <th>Firstname</th>
-                <td>{{ param.firstname }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ param.name }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ param.description }}</td>
-            </tr>
-            <tr>
-                <th>Profile_photo</th>
-                <td>{{ param.profilePhoto }}</td>
-            </tr>
-            <tr>
-                <th>City</th>
-                <td>{{ param.city }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ param.email }}</td>
-            </tr>
-            <tr>
-                <th>Mobile</th>
-                <td>{{ param.mobile }}</td>
-            </tr>
-            <tr>
-                <th>Linkedin</th>
-                <td>{{ param.linkedin }}</td>
-            </tr>
-            <tr>
-                <th>Cv</th>
-                <td>{{ param.cv }}</td>
-            </tr>
-            <tr>
-                <th>Github</th>
-                <td>{{ param.github }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <a class="btn" href="{{ path('app_params_edit', {'id': param.id}) }}">EDIT</a>
 
-    <a href="{{ path('app_params_index') }}">back to list</a>
+            <a class="btn-back" href="{{ path('app_params_index') }}">BACK TO LIST</a>
 
-    <a href="{{ path('app_params_edit', {'id': param.id}) }}">edit</a>
-
-    {{ include('params/_delete_form.html.twig') }}
+            {# {{ include('params/_delete_form.html.twig') }} #}
+        </div>
+    </div>
 {% endblock %}

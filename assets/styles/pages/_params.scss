@@ -1,0 +1,128 @@
+.params-page {
+    padding: 50px 0 0 0;
+
+    &.show {
+        .all-params {
+            table {
+                th {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    .all-params {
+        display: grid;
+        gap: 30px;
+        border-radius: 20px;
+
+        table {
+            border: 1px solid $white;
+
+            th {
+                background-color: $orange;
+            }
+
+            td {
+
+                &.actions {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+
+                a:hover {
+                    color: rgba($white, 0.7);
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid $white;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+
+            th:not(:last-child),
+            td:not(:last-child) {
+                border-right: 1px solid $white;
+            }
+        }
+    }
+
+    form {
+        display: grid;
+        gap: 30px;
+
+        #params {
+            display: grid;
+            gap: 30px;
+
+            &>div {
+                display: grid;
+                gap: 10px;
+
+                input,
+                textarea {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid transparent;
+
+                    &:focus-visible {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 10px;
+        border: 1px solid $white;
+        background-color: $orange;
+        border-radius: 20px;
+        color: $white;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($orange, 0.7);
+            transition: all 0.3 ease-in;
+        }
+    }
+
+
+    .btn-delete {
+        padding: 10px;
+        border: 1px solid $white;
+        background-color: $red;
+        border-radius: 20px;
+        color: $white;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($red, 0.7);
+            transition: all 0.3 ease-in;
+        }
+    }
+
+
+    .btn-back {
+        padding: 10px;
+        background-color: $white;
+        color: $secondary ;
+        text-align: center;
+        border-radius: 20px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($white, 0.7);
+            transition: all 0.3 ease-in;
+        }
+    }
+}

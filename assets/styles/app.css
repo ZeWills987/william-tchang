@@ -11851,11 +11851,11 @@ body:has(dialog[open]) {
 }
 
 .text-success {
-  color: #338b96 !important;
+  color: #50bb4a !important;
 }
 
 .text-danger {
-  color: #ef6869 !important;
+  color: #f80909 !important;
 }
 
 .text-warning {
@@ -12106,15 +12106,15 @@ body:has(dialog[open]) {
 }
 
 .well-success {
-  background-color: #338b96;
+  background-color: #50bb4a;
   color: #fff;
-  border: 1px solid #2d7983;
+  border: 1px solid #46ab40;
 }
 
 .well-danger {
-  background-color: #ef6869;
+  background-color: #f80909;
   color: #fff;
-  border: 1px solid #ed5152;
+  border: 1px solid #e10606;
 }
 
 .well-warning {
@@ -12188,12 +12188,12 @@ body:has(dialog[open]) {
 }
 
 .bg-success {
-  background-color: #338b96;
+  background-color: #50bb4a;
   color: #fff;
 }
 
 .bg-danger {
-  background-color: #ef6869;
+  background-color: #f80909;
   color: #fff;
 }
 
@@ -12371,12 +12371,12 @@ body:has(dialog[open]) {
 }
 
 .badge-success {
-  background-color: #338b96;
+  background-color: #50bb4a;
   color: #fff;
 }
 
 .badge-danger {
-  background-color: #ef6869;
+  background-color: #f80909;
   color: #fff;
 }
 
@@ -12920,6 +12920,244 @@ body:has(dialog[open]) {
   .home .presentation {
     border-radius: 30px;
   }
+}
+
+.params-page {
+  padding: 50px 0 0 0;
+}
+.params-page.show .all-params table th {
+  width: 200px;
+}
+.params-page .all-params {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  border-radius: 20px;
+}
+.params-page .all-params table {
+  border: 1px solid #fff;
+}
+.params-page .all-params table th {
+  background-color: rgb(255, 115, 37);
+}
+.params-page .all-params table td.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.params-page .all-params table td a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.params-page .all-params table th,
+.params-page .all-params table td {
+  border-bottom: 1px solid #fff;
+}
+.params-page .all-params table th,
+.params-page .all-params table td {
+  padding: 10px;
+}
+.params-page .all-params table th:not(:last-child),
+.params-page .all-params table td:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.params-page form {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.params-page form #params {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.params-page form #params > div {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+.params-page form #params > div input,
+.params-page form #params > div textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.params-page form #params > div input:focus-visible,
+.params-page form #params > div textarea:focus-visible {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.params-page .btn {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: rgb(255, 115, 37);
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.params-page .btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 115, 37, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.params-page .btn-delete {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #f80909;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.params-page .btn-delete:hover {
+  cursor: pointer;
+  background-color: rgba(248, 9, 9, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.params-page .btn-back {
+  padding: 10px;
+  background-color: #fff;
+  color: #131315;
+  text-align: center;
+  border-radius: 20px;
+}
+.params-page .btn-back:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+
+.project-page {
+  padding: 50px 0 0 0;
+}
+.project-page.show .all-projects table th {
+  width: 200px;
+}
+.project-page .all-projects {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 20px;
+  gap: 30px;
+}
+.project-page .all-projects table {
+  border: 1px solid #fff;
+}
+.project-page .all-projects table th {
+  background-color: rgb(255, 115, 37);
+}
+.project-page .all-projects table td.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.project-page .all-projects table td a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.project-page .all-projects table th,
+.project-page .all-projects table td {
+  border-bottom: 1px solid #fff;
+}
+.project-page .all-projects table th,
+.project-page .all-projects table td {
+  padding: 10px;
+}
+.project-page .all-projects table th:not(:last-child),
+.project-page .all-projects table td:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.project-page form {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.project-page form #project {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.project-page form #project > div {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+.project-page form #project > div input,
+.project-page form #project > div textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.project-page form #project > div input:focus-visible,
+.project-page form #project > div textarea:focus-visible {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.project-page .btn {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: rgb(255, 115, 37);
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.project-page .btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 115, 37, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.project-page .btn-new {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #50bb4a;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.project-page .btn-new:hover {
+  cursor: pointer;
+  background-color: rgba(80, 187, 74, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.project-page .btn-delete {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #f80909;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.project-page .btn-delete:hover {
+  cursor: pointer;
+  background-color: rgba(248, 9, 9, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.project-page .btn-back {
+  padding: 10px;
+  background-color: #fff;
+  color: #131315;
+  text-align: center;
+  border-radius: 20px;
+}
+.project-page .btn-back:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
 }
 
 /* - - - -    Z-index Element Priority    - - - -  */
