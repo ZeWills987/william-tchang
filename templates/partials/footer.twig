@@ -7,7 +7,7 @@
     <div class="flex flex-col md:flex-row justify-between pb-30 md:p-0">
         <div class="me">
             <img data-aos="fade-up" src="{{ asset('image/me.jpg') }}" alt="" class="avatar fade-in-scroll">
-            <h3 data-aos="fade-up" class="title-me">Web Developper <br> based in Bordeaux</h3>
+            <h3 data-aos="fade-up" class="title-me">Web Developper <br> based in {{params.city}}</h3>
         </div>
         <div class="footer-nav">
             <ul data-aos="fade-up">
@@ -19,11 +19,11 @@
             <ul data-aos="fade-up">
                 <h3 class="title-me">Sociel Media</h3>
                 <li><a target="_blank" href="https://gitlab.com/williamtchang4">Gitlab</a></li>
-                <li><a target="_blank" href="https://github.com/ZeWills987">Github</a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/william-tchang-raimana/">Linkedin</a></li>
+                <li><a target="_blank" href="{{params.github}}">Github</a></li>
+                <li><a target="_blank" href="{{params.linkedin}}">Linkedin</a></li>
             </ul>
         </div>
     </div>
     <hr>
-    <p class="copyright pt-30 md:pt-30">©{{"now"|date("Y") }} by William TCHANG. All right reserved.</p>
+    <p class="copyright pt-30 md:pt-30">©{{"now"|date("Y") }} by {{params.firstname}} {{params.name}}. All right reserved.</p>
 </footer>

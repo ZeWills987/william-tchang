@@ -43,6 +43,9 @@ class Params
     #[ORM\Column(length: 255)]
     private ?string $github = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $gitlab = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -164,6 +167,18 @@ class Params
     public function setGithub(string $github): static
     {
         $this->github = $github;
+
+        return $this;
+    }
+
+    public function getGitlab(): ?string
+    {
+        return $this->gitlab;
+    }
+
+    public function setGitlab(string $gitlab): static
+    {
+        $this->gitlab = $gitlab;
 
         return $this;
     }

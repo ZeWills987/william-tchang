@@ -15,7 +15,6 @@ final class HomeController extends AbstractController
     {
 
         return $this->render('home/index.html.twig', [
-            'params' => $paramsRepository->findAll()[0],
             'projects'=>$projectRepository->findAll()
         ]);
     }
