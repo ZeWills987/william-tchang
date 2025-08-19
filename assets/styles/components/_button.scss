@@ -92,3 +92,16 @@
         }
     }
 }
+
+// MOBILE
+
+@media screen and (max-width:$medium) {
+    .btn-more {
+        padding: 5px 10px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

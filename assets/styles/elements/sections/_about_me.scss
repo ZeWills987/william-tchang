@@ -21,5 +21,10 @@
 @media screen and (max-width:$medium) {
     .about-me {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        h3 {
+            font-size: 26px;
+            line-height: 32px;
+        }
     }
 }

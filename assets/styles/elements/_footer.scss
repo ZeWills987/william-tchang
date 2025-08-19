@@ -72,4 +72,31 @@ footer {
         text-align: center;
         color: rgba($white, 0.5);
     }
+
+    @media screen and (max-width:$medium) {
+        padding-bottom: 20px;
+
+        .footer-title {
+            font-size: 50px;
+            line-height: 100%;
+        }
+
+        .me {
+            justify-content: center;
+            align-items: center;
+
+            .title-me {
+                text-align: center;
+            }
+        }
+
+        .footer-nav {
+            flex-direction: column;
+
+            li {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
 }

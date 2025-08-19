@@ -85,4 +85,24 @@
             background-color: $white !important;
         }
     }
+
+    @media screen and (max-width:$medium) {
+        .title-section-white {
+            display: flex;
+            align-items: center;
+        }
+
+        .next-prev {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .swiper-pagination {
+            left: calc(50% - 30px);
+        }
+    }
 }

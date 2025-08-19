@@ -15,4 +15,11 @@
             line-height: 150%;
         }
     }
+
+    // MOBILE
+    @media screen and (max-width:$medium) {
+        .presentation {
+            border-radius: 30px;
+        }
+    }
 }
