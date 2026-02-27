@@ -25,6 +25,14 @@
                         <td>{{ param.description }}</td>
                     </tr>
                     <tr>
+                        <th>A propos de moi</th>
+                        <td>{{ param.aboutMe|nl2br }}</td>
+                    </tr>
+                    <tr>
+                        <th>Compétences</th>
+                        <td>{{ param.skills|join(', ') }}</td>
+                    </tr>
+                    <tr>
                         <th>Profile_photo</th>
                         <td><img src="{{ asset(param.profilePhoto) }}" alt=""></td>
                     </tr>

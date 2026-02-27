@@ -1,0 +1,41 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Params index{% endblock %}
+
+{% block body %}
+    <div class="layout-maxed params-page  index">
+        <div class="bg-dark px-20 py-30 mb-70 all-params">
+            <h1>Params index</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Ordre</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for skill in skills %}
+                    <tr>
+                        <td>{{ skill.id }}</td>
+                        <td>{{ skill.name }}</td>
+                        <td>{{ skill.type }}</td>
+                        <td>{{ skill.ordered }}</td>
+                        <td class="actions">
+                            <a href="{{ path('app_skills_show', {'id': skill.id}) }}">Show</a>
+                            <a href="{{ path('app_skills_edit', {'id': skill.id}) }}">Edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="12">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <a class="btn-new" href="{{ path('app_skills_new') }}">Create new</a>
+        </div>
+    </div>
+{% endblock %}

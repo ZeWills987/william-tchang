@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ParamsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: ParamsRepository::class)]
 class Params
@@ -45,6 +46,12 @@ class Params
 
     #[ORM\Column(length: 255)]
     private ?string $gitlab = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $aboutMe = null;
+
+    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    private ?array $skills = null;
 
     public function getId(): ?int
     {
@@ -179,6 +186,30 @@ class Params
     public function setGitlab(string $gitlab): static
     {
         $this->gitlab = $gitlab;
+
+        return $this;
+    }
+
+    public function getAboutMe(): ?string
+    {
+        return $this->aboutMe;
+    }
+
+    public function setAboutMe(?string $aboutMe): static
+    {
+        $this->aboutMe = $aboutMe;
+
+        return $this;
+    }
+
+    public function getSkills(): ?array
+    {
+        return $this->skills;
+    }
+
+    public function setSkills(?array $skills): static
+    {
+        $this->skills = $skills;
 
         return $this;
     }

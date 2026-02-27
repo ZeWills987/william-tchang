@@ -4,7 +4,13 @@ security:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
-        users_in_memory: { memory: null }
+        users_in_memory:
+            memory:
+                users:
+                    admin: # Votre identifiant (vous pouvez mettre "william")
+                        password: '$2y$13$LxOxntOGDkauVx9apFX/2eAElccLLL41goS4XHpeyK9G7aG18lw/S'
+                        roles: 'ROLE_ADMIN'
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -12,6 +18,9 @@ security:
         main:
             lazy: true
             provider: users_in_memory
+
+            http_basic:
+                realm: 'Espace Administration'
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -22,7 +31,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

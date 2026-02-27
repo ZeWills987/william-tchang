@@ -17,7 +17,7 @@ final class ParamsController extends AbstractController
     #[Route(name: 'app_params_index', methods: ['GET'])]
     public function index(ParamsRepository $paramsRepository): Response
     {
-        return $this->render('params/index.html.twig', [
+        return $this->render('admin/params/index.html.twig', [
             'params' => $paramsRepository->findAll(),
         ]);
     }
@@ -58,7 +58,7 @@ final class ParamsController extends AbstractController
             return $this->redirectToRoute('app_params_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('params/new.html.twig', [
+        return $this->render('admin/params/new.html.twig', [
             'param' => $param,
             'form' => $form,
         ]);
@@ -67,7 +67,7 @@ final class ParamsController extends AbstractController
     #[Route('/{id}', name: 'app_params_show', methods: ['GET'])]
     public function show(Params $param): Response
     {
-        return $this->render('params/show.html.twig', [
+        return $this->render('admin/params/show.html.twig', [
             'param' => $param,
         ]);
     }
@@ -79,12 +79,36 @@ final class ParamsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $imageFile = $form->get('profile_photo')->getData();
+
+            if ($imageFile) {
+                $newFilename = uniqid().'.'.$imageFile->guessExtension();
+                $imageFile->move(
+                    $this->getParameter('uploads_directory'),
+                    $newFilename
+                );
+
+                $param->setProfilePhoto('uploads/' . $newFilename);
+            }
+
+
+            $cvFile = $form->get('cv')->getData();
+            if ($cvFile) {
+                $newFilename = uniqid().'.'.$cvFile->guessExtension();
+                $cvFile->move(
+                    $this->getParameter('uploads_directory'),
+                    $newFilename
+                );
+                $param->setCv('uploads/' . $newFilename);
+            }
+            
             $entityManager->flush();
 
             return $this->redirectToRoute('app_params_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('params/edit.html.twig', [
+        return $this->render('admin/params/edit.html.twig', [
             'param' => $param,
             'form' => $form,
         ]);

@@ -66,7 +66,7 @@ window.onload = function () {
 
 // Swiper.js
 var swiper = new Swiper(".swiper-projects", {
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     spaceBetween: 30,
     loop: true,
     autoplay: {

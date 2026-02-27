@@ -1,0 +1,15 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}New Skills{% endblock %}
+
+{% block body %}
+    <div class="layout-maxed project-page">
+        <div class="bg-dark px-20 py-30 mb-70 all-projects">
+            <h1>Create new Skills</h1>
+
+            {{ include('admin/skills/_form.html.twig') }}
+
+            <a href="{{ path('app_skills_index') }}">back to list</a>
+        </div>
+    </div>
+{% endblock %}

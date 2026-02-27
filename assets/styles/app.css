@@ -12794,6 +12794,7 @@ body:has(dialog[open]) {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  max-width: 400px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12812,6 +12813,9 @@ body:has(dialog[open]) {
   line-height: 26px;
   font-weight: 600;
   color: #fff;
+}
+.card-project .content .content-text p {
+  color: rgba(255, 255, 255, 0.7);
 }
 .card-project svg {
   padding: 10px;
@@ -12896,6 +12900,7 @@ body:has(dialog[open]) {
 }
 .home .presentation {
   padding: 90px 20px 20px 20px;
+  height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12903,11 +12908,17 @@ body:has(dialog[open]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #131315;
   border-radius: 50px;
+}
+.home .presentation img {
+  max-height: 250px;
 }
 .home .presentation p {
   max-width: 700px;
@@ -12915,6 +12926,12 @@ body:has(dialog[open]) {
   color: #fff;
   opacity: 0.8;
   line-height: 150%;
+}
+.home .experience {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 @media screen and (max-width: 992px) {
   .home .presentation {

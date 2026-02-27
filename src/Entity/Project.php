@@ -32,6 +32,18 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $extract = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $type = null;
+
+    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    private ?array $techno = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image_mobile = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTime $date = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +117,54 @@ class Project
     public function setExtract(string $extract): static
     {
         $this->extract = $extract;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(?string $type): static
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    public function getTechno(): ?array
+    {
+        return $this->techno;
+    }
+
+    public function setTechno(?array $techno): static
+    {
+        $this->techno = $techno;
+
+        return $this;
+    }
+
+    public function getImageMobile(): ?string
+    {
+        return $this->image_mobile;
+    }
+
+    public function setImageMobile(?string $image_mobile): static
+    {
+        $this->image_mobile = $image_mobile;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTime
+    {
+        return $this->date;
+    }
+
+    public function setDate(?\DateTime $date): static
+    {
+        $this->date = $date;
 
         return $this;
     }

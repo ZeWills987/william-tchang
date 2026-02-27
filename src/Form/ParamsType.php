@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType; 
 
 class ParamsType extends AbstractType
 {
@@ -25,6 +26,32 @@ class ParamsType extends AbstractType
             ])
             ->add('description',TextareaType::class, [
                 'label' => 'Description'
+            ])
+            ->add('aboutMe',TextareaType::class, [
+                'label' => 'À propos de moi'
+            ])
+            ->add('skills', ChoiceType::class, [
+                            'label' => 'Compétences',
+                            'choices' => [
+                                'PHP' => 'PHP',
+                                'Symfony' => 'Symfony',
+                                'React' => 'React',
+                                'TypeScript' => 'TypeScript',
+                                'AWS S3' => 'AWS S3',
+                                'WordPress' => 'WordPress',
+                                'Python' => 'Python',
+                                'Docker' => 'Docker',
+                                'SQL' => 'SQL',
+                                'Java' => 'Java',
+                                'C#' => 'C#',
+                                'C' => 'C',
+                            ],
+                            'multiple' => true, 
+                            'expanded' => false,
+                            'required' => false,
+                            'attr' => [
+                                'class' => 'select-skills'
+                            ]
             ])
             ->add('profile_photo', FileType::class, [
                 'label' => 'Photo de présentation',
@@ -54,6 +81,10 @@ class ParamsType extends AbstractType
             ])
             ->add('github', UrlType::class, [
                 'label' => 'Github',
+                'required' => false
+            ])
+            ->add('gitlab', UrlType::class, [
+                'label' => 'Gitlab',
                 'required' => false
             ])
         ;

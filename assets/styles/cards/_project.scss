@@ -86,6 +86,7 @@
         .content-text {
             padding: 20px;
             width: max-content;
+            max-width: 400px;
             height: 100%;
             display: flex;
             gap: 50px;
@@ -102,6 +103,10 @@
                 line-height: 26px;
                 font-weight: 600;
                 color: $primary;
+            }
+
+            p {
+                color: rgba($white, 0.7);
             }
         }
     }

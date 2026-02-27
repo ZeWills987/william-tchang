@@ -1,0 +1,17 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Edit Skills{% endblock %}
+
+{% block body %}
+    <div class="layout-maxed params-page edit">
+        <div class="bg-dark px-20 py-30 mb-70 all-params">
+            <h1>Edit Skills</h1>
+
+            {{ include('admin/skills/_form.html.twig', {'button_label': 'UPADATE'}) }}
+
+            <a class="btn-back" href="{{ path('app_skills_index') }}">back to list</a>
+
+            {{ include('admin/skills/_delete_form.html.twig') }}
+            </div>
+    </div>
+{% endblock %}

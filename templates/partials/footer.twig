@@ -6,7 +6,7 @@
     <hr>
     <div class="flex flex-col md:flex-row justify-between pb-30 md:p-0">
         <div class="me">
-            <img data-aos="fade-up" src="{{ asset('image/me.jpg') }}" alt="" class="avatar fade-in-scroll">
+            <img data-aos="fade-up" src="{{ asset(params.profilePhoto) }}" alt="" class="avatar fade-in-scroll">
             <h3 data-aos="fade-up" class="title-me">Web Developper <br> based in {{params.city}}</h3>
         </div>
         <div class="footer-nav">
@@ -18,7 +18,7 @@
             </ul>
             <ul data-aos="fade-up">
                 <h3 class="title-me">Sociel Media</h3>
-                <li><a target="_blank" href="https://gitlab.com/williamtchang4">Gitlab</a></li>
+                <li><a target="_blank" href="{{params.gitlab}}">Gitlab</a></li>
                 <li><a target="_blank" href="{{params.github}}">Github</a></li>
                 <li><a target="_blank" href="{{params.linkedin}}">Linkedin</a></li>
             </ul>
