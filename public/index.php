@@ -1,9 +1,6 @@
 <?php
 
 use App\Kernel;
-use Symfony\Component\ErrorHandler\Debug;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\DebugBundle;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
