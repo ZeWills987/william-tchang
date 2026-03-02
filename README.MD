@@ -35,18 +35,10 @@
 
 ## Overview
 
-William Tchang is a versatile developer toolset crafted to streamline the development of modern web applications, especially within Symfony environments. It combines efficient frontend asset management with a robust backend architecture, enabling seamless integration of dependencies, routing, and security.
+
 
 **Why William Tchang?**
 
-This project aims to simplify complex workflows, enhance maintainability, and accelerate deployment. The core features include:
-
-- 🛠️ **Asset Management:** Efficiently organize and load frontend dependencies with importmap.php, Stimulus controllers, and Turbo.
-- 🚀 **Dependency Handling:** Manage project libraries via package.json and composer.json for consistent development and production environments.
-- 🔧 **Framework Integration:** Leverage Symfony’s core components, controllers, and entities for a scalable, maintainable backend.
-- 🧪 **Testing & Automation:** Configure PHPUnit and build tools like Prepros for reliable testing and streamlined development.
-- 🔒 **Security & Routing:** Implement secure user workflows with detailed routing, security, and internationalization configurations.
-- 📊 **Developer Tools:** Utilize web profiler, debug configs, and environment setups for efficient troubleshooting and performance tuning.
 
 ---
 
@@ -56,38 +48,111 @@ This project aims to simplify complex workflows, enhance maintainability, and ac
 
 This project requires the following dependencies:
 
-- **Programming Language:** unknown
-- **Package Manager:** Npm, Composer
+- **Programming Language** 
+
+PHP > 7.*, Symfony, JavaScript and SASS
+
+- **Package Manager** 
+
+Npm, Composer
+
+- **Database**
+
+Mysql, Postgre or SQLite
 
 ### Installation
 
 Build william-tchang from the source and install dependencies:
 
-1. **Clone the repository:**
-
+1. **Clone the repository :**
+```
 git clone https://github.com/ZeWills987/william-tchang
+```
 
+2. **Install the dependencies:**
 
-2. **Navigate to the project directory:**
-
-cd william-tchang
-
-3. **Install the dependencies:**
-
-Using npm:
+Install **npm** dependencies with :
+```
 npm install
+```
 
-Using composer:
+Install **composer** dependencies with :
+```
 composer install
-
+```
 
 ### Usage
 
-Run the project with:
+In first create the **.env** file in repository base thanks to this following example :
+````
+# In all environments, the following files are loaded if they exist,
+# the latter taking precedence over the former:
+#
+#  * .env                contains default values for the environment variables needed by the app
+#  * .env.local          uncommitted file with local overrides
+#  * .env.$APP_ENV       committed environment-specific defaults
+#  * .env.$APP_ENV.local uncommitted environment-specific overrides
+#
+# Real environment variables win over .env files.
+#
+# DO NOT DEFINE PRODUCTION SECRETS IN THIS FILE NOR IN ANY OTHER COMMITTED FILES.
+# https://symfony.com/doc/current/configuration/secrets.html
+#
+# Run "composer dump-env prod" to compile .env files for production use (requires symfony/flex >=1.2).
+# https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration
 
-Using symfony :
-symfony serve
+###> symfony/framework-bundle ###
+APP_ENV=dev
+APP_SECRET=
+###< symfony/framework-bundle ###
 
+###> doctrine/doctrine-bundle ###
+# Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
+# IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml
+#
+# DATABASE_URL="sqlite:///%kernel.project_dir%/var/data_%kernel.environment%.db"
+# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=16&charset=utf8"
+# DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+###< doctrine/doctrine-bundle ###
+
+###> symfony/messenger ###
+# Choose one of the transports below
+# MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages
+# MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages
+MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0
+###< symfony/messenger ###
+
+###> symfony/mailer ###
+MAILER_DSN=null://null
+###< symfony/mailer ###
+
+````
+
+For .env file uncomment the database url choice you want (MySql,Postgre or SQLite) and complete information to connecte your app to database. For example :
+
+I have a database name titi in the 127.0.0.1:3306 domain with the following user named toto with all rigth acces in titi database. For user password we have 'totoPass1234'. 
+
+```
+DATABASE_URL="mysql://toto:totoPass1234@127.0.0.1:3306/titi?serverVersion=16&charset=utf8"
+```
+
+
+Developpement environnement : 
+
+- using symfony
+```
+symfony serve 
+```
+ - or using php
+```
+php bin\console serve
+```
+
+Production environnement (deploy) : 
+
+Point the domain point into the "william-tchang/public" repository.
+
+Don't forget to compile the SASS app file to get all style sheet. 
 
 ---
 

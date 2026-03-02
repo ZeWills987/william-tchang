@@ -1,6 +1,15 @@
 {
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "swiper": "^11.2.10"
+    "swiper": "^12.1.2"
+  },
+  "scripts": {
+    "dev": "npx encore dev-server",
+    "build": "npx encore production"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^4.7.0",
+    "sass": "^1.97.3",
+    "sass-loader": "^14.2.1"
   }
 }
