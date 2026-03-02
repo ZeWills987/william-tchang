@@ -137,7 +137,7 @@ DATABASE_URL="mysql://toto:totoPass1234@127.0.0.1:3306/titi?serverVersion=16&cha
 ```
 
 
-Developpement environnement : 
+**Developpement environnement :**
 
 - using symfony
 ```
@@ -148,12 +148,16 @@ symfony serve
 php bin\console serve
 ```
 
-Production environnement (deploy) : 
+
+**Production environnement (deploy) :** 
 
 Point the domain point into the "william-tchang/public" repository.
 
-Don't forget to compile the SASS app file to get all style sheet. 
 
+Don't forget to compile the SASS app file to get all style sheet. 
+````
+php bin/console asset-map:compile
+````
 ---
 
 [⬆ Return](#top)
