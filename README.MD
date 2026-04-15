@@ -148,6 +148,22 @@ symfony serve
 php bin\console serve
 ```
 
+For compile scss files to css 
+```
+php bin/console asset-map:compile
+```
+ 
+For updates scss files if they don't refresh after changes.
+```
+browser-sync start --proxy "127.0.0.1:8000" --files "templates/**/*.twig, assets/**/*.css, assets/**/*.js"
+```
+
+
+
+```
+php bin\console serve
+```
+
 
 **Production environnement (deploy) :** 
 
