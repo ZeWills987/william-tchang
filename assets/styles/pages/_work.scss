@@ -1,0 +1,17 @@
+.work-page {
+    h1 {
+        margin: 50px 0 50px 0;
+        color: $secondary;
+        height: max-content;
+        font-size: 72px;
+        line-height: 80px;
+    }
+
+    .works {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 20px;
+        height: max-content;
+    }
+}

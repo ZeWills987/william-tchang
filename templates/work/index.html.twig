@@ -3,49 +3,19 @@
     {% block title %}Work William{% endblock %}
 
     {% block body %}
-        <div class="layout-maxed home">
-            <div id="project" class="projects mb-70">
-                <div class="top">
-                    <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING IN</h3>
-                    <h2 data-aos="fade-up">UNIVERSITY</h2>
-                    <h2 data-aos="fade-up">WEB AGENCY</h2>
-                    <h2 data-aos="fade-up">SIDE PROJECTS</h2>
-                </div>
-                <div class="swiper-projects mt-10 md:mt-30">
-                    <div class="flex justify-between">
-                        <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
-                        <div data-aos="fade-up" class="next-prev">
-                            <div class="swiper-button-prev">
-                            </div>
-                            <div class="swiper-button-next">
-                            </div>
-                        </div>
+        <div class="layout-maxed work-page">
+            <h1 data-aos-easing="ease" data-aos-duration="400" data-aos-delay="50">My Works</h1>
+
+            {# {{dump(projects)}} #}
+            <div class="works">
+                {% for project in projects %}
+                    <div class="work-card">
+                        <a href="">
+                            <img src="{{ asset(project.image) }}" alt="{{ project.title }}">
+                            <h2>{{ project.title }}</h2>
+                        </a>
                     </div>
-                    <div class="swiper-wrapper">
-                        {% for project in projects %}
-                            <div data-aos="fade-up" class="swiper-slide">
-                                <div class="card-project">
-                                    <img src="{{ asset(project.image) }}" alt="">
-                                    <div class="content">
-                                        <h3 class="title-section-white">{{loop.index}}/{{projects|length}}</h3>
-                                        <div class="bottom">
-                                            <div class="content-text">
-                                                <div class="flex flex-col gap-10">
-                                                    <h3 class="item">{{project.title}} ({{project.date|date('Y')}})</h3>
-                                                    <p>{{project.extract}}</p>
-                                                </div>
-                                            </div>
-                                            <a href="{{project.link}}" class="btn-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
+                {% endfor %}
+            </div> 
         </div>
     {% endblock %}

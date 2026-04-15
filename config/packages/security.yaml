@@ -7,7 +7,7 @@ security:
         users_in_memory:
             memory:
                 users:
-                    admin: # Votre identifiant (vous pouvez mettre "william")
+                    admin:
                         password: '$2y$13$LxOxntOGDkauVx9apFX/2eAElccLLL41goS4XHpeyK9G7aG18lw/S'
                         roles: 'ROLE_ADMIN'
 
