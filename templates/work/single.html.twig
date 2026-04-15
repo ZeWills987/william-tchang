@@ -4,19 +4,32 @@
 
     {% block body %}
         <div class="layout-maxed single-work">
-            {{dump(project)}}
             <h1 class="fade-in-1" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="50">{{ project.title }}</h1>
-
+            
             <div class="details fade-in-2">
-                <div class="col">
-                    <p>DATE</p>
-                    <h3>{{ project.date|date('F j, Y') }}</h3>
+                <div class="infos">
+                    <div class="col">
+                        <p>DATE</p>
+                        <h3>{{ project.date|date('F Y') }}</h3>
+                    </div>
+                    <div class="col">
+                        <p>TYPE</p>
+                        <h3>{{ project.type }}</h3>
+                    </div>
+                    <div class="col">
+                        <p>TECHNOLOGIES</p>
+                        <h3>{{ project.skills|join(', ') }}</h3>
+                    </div>
                 </div>
-                <div class="col">
-                    <p>TYPE</p>
-                    <h3>WebSite</h3>
-                </div>
-                
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="link-extern">View work</a>
+                {% endif %}
+
             </div>
+
+            <div class="description fade-in-2">
+                {{ project.description|raw }}
+            </div>
+            <img src="{{asset(project.image)}}" alt="{{ project.title }}" class="fade-in-2">
         </div>
     {% endblock %}

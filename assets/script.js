@@ -17,9 +17,11 @@ if (swiperContainer) {
 // Menu Burger
 const header = document.querySelector("header");
 if (header) {
+    console.log("Header trouvé, initialisation du menu burger...");
     const menu = header.querySelector('.nav-items');
     const burger_btn = header.querySelector('svg');
     if (burger_btn && menu) {
+        console.log("Menu burger et menu trouvés, ajout de l'événement de clic...");
         burger_btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });

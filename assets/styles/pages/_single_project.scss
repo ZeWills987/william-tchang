@@ -1,4 +1,6 @@
 .single-work {
+    margin-bottom: 50px;
+
     h1 {
         margin: 50px 0 50px 0;
         color: $secondary;
@@ -7,4 +9,62 @@
         line-height: 80px;
     }
 
+    .details {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .infos {
+            display: flex;
+            gap: 80px;
+
+        }
+
+        p {
+            display: -webkit-box;
+            font-family: $ff-inter;
+            font-size: 18px;
+            letter-spacing: 7.2px;
+            color: $gray-title;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            display: -webkit-box;
+            font-family: $ff;
+            font-weight: 600;
+            font-size: 24px;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            color: $secondary;
+        }
+    }
+
+    img {
+        margin-top: 50px;
+    }
+
+    .description {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .link-extern {
+        padding: 10px 15px;
+        height: max-content;
+        width: max-content;
+        background-color: $secondary;
+        color: $primary;
+        border-radius: 50px;
+        justify-items: end;
+
+
+        &:hover {
+            background-color: rgb($secondary, 0.8);
+            color: rgba($primary, 0.8);
+        }
+    }
 }

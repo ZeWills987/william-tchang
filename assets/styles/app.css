@@ -13318,6 +13318,9 @@ body:has(dialog[open]) {
   height: max-content;
 }
 
+.single-work {
+  margin-bottom: 50px;
+}
 .single-work h1 {
   margin: 50px 0 50px 0;
   color: #131315;
@@ -13326,6 +13329,65 @@ body:has(dialog[open]) {
   height: max-content;
   font-size: 72px;
   line-height: 80px;
+}
+.single-work .details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.single-work .details .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+.single-work .details p {
+  display: -webkit-box;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  letter-spacing: 7.2px;
+  color: rgb(176, 176, 176);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.single-work .details h3 {
+  display: -webkit-box;
+  font-family: General Sans, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: #131315;
+}
+.single-work img {
+  margin-top: 50px;
+}
+.single-work .description {
+  margin-top: 50px;
+  font-size: 20px;
+}
+.single-work .link-extern {
+  padding: 10px 15px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #131315;
+  color: #fff;
+  border-radius: 50px;
+  justify-items: end;
+}
+.single-work .link-extern:hover {
+  background-color: rgba(19, 19, 21, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* - - - -    Z-index Element Priority    - - - -  */
