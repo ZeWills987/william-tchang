@@ -6,11 +6,10 @@
         <div class="layout-maxed work-page">
             <h1 class="fade-in-1" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="50">My Works</h1>
 
-            {# {{dump(projects)}} #}
             <div class="works">
                 {% for project in projects %}
                     <div class="work-card fade-in-2">
-                        <a href="">
+                        <a href="/work/{{ project.title }}">
                             <img src="{{ asset(project.image) }}" alt="{{ project.title }}">
                             <div class="content">
                                 <div class="top">

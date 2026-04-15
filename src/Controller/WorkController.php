@@ -18,11 +18,22 @@ final class WorkController extends AbstractController
         $frameworks = $skillsRepository->findBy(['type' => 'frameworks'],['ordered' => 'ASC']);
         $softSkills = $skillsRepository->findBy(['type' => 'softSkills'],['ordered' => 'ASC']);
 
+        $projects = $projectRepository->findBy([], ['date' => 'DESC']);
+
         return $this->render('work/index.html.twig', [
-            'projects' => $projectRepository->findBy([], ['date' => 'DESC']),
+            'projects' => $projects,
             'languages' => $languages,
             'frameworks' => $frameworks,
             'softSkills' => $softSkills
+        ]);
+    }
+
+    #[Route('/work/{title}', name: 'single_work')]
+    public function single($title, ProjectRepository $projectRepository,ParamsRepository $paramsRepository, SkillsRepository $skillsRepository): Response
+    {
+
+        return $this->render('work/single.html.twig', [
+            'project' => $projectRepository->findBy(['title' => $title])[0] ?? null,
         ]);
     }
 }

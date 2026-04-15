@@ -13318,4 +13318,14 @@ body:has(dialog[open]) {
   height: max-content;
 }
 
+.single-work h1 {
+  margin: 50px 0 50px 0;
+  color: #131315;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 72px;
+  line-height: 80px;
+}
+
 /* - - - -    Z-index Element Priority    - - - -  */
