@@ -5,14 +5,11 @@
 {% block body %}
     <div class="layout-maxed home">
         <div class="presentation mb-70">
-            <h1 class="page-title-white mb-30 fade-in-1">{{params.firstname}} Web Developer</h1>
+            <h1 class="page-title-white mb-30 fade-in-1">Junior Web Developer</h1>
             <p class="page-description fade-in-2">
                 {{params.description}}
             </p>
 
-
-
-            
             <a href="{{path('app_contact')}}" class="btn-contact fade-in-3 mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
             <div class="grid md:grid-cols-2 gap-20">
                     <div class="card-branding-project fade-in-4">
@@ -34,47 +31,6 @@
                         </div>
                     </div>
                 </div>
-        </div>
-
-        <div id="about" class="about-me mb-70 gap-30">
-            <img src="{{ asset(params.profilePhoto) }}" alt="{{params.firstname}}">
-            <div class="content">
-                <h2 class="page-title mb-30 fade-in-1">About Me</h2>
-                <p class="page-description fade-in-2">
-                    {{params.aboutMe|nl2br}}
-                </p>
-                <hr class="opacity-20 my-30">
-                <h3 data-aos="fade-up" class="title-section-white my-30">My Skills</h3>
-
-                <div class="skills-list">
-                    <strong>Languages : </strong>
-                    {% for language in languages %}
-                        <span class="skill">{{ language.name }}</span>
-                        {% if not loop.last %} - {% endif %}
-                    {% endfor %}
-                </div>
-                <br>
-
-                <div class="skills-list">
-                    <strong>Frameworks : </strong>
-                    {% for framework in frameworks %}
-                        <span class="skill">{{ framework.name }}</span>
-                        {% if not loop.last %} - {% endif %}
-                    {% endfor %}
-                </div>
-
-                <hr class="opacity-20 my-30">
-
-                <h3 data-aos="fade-up" class="title-section-white">Soft Skills</h3>
-                <div class="skills-list">
-                    <strong>Soft Skills : </strong>
-                    {% for softSkill in softSkills %}
-                        <span class="skill">{{ softSkill.name }}</span>
-                        {% if not loop.last %} - {% endif %}
-                    {% endfor %}
-                </div>
-                <a href="{{path('app_contact')}}" class="btn-contact fade-in-3 mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
-            </div>
         </div>
 
         <div id="project" class="projects mb-70">
@@ -122,6 +78,46 @@
             </div>
         </div>
 
+        <div id="about" class="about-me mb-70 gap-30">
+            <img src="{{ asset(params.profilePhoto) }}" alt="{{params.firstname}}">
+            <div class="content">
+                <h2 class="page-title mb-30 fade-in-1">About Me</h2>
+                <p class="page-description fade-in-2">
+                    {{params.aboutMe|nl2br}}
+                </p>
+                <hr class="opacity-20 my-30">
+                <h3 data-aos="fade-up" class="title-section-white my-30">My Skills</h3>
+
+                <div class="skills-list">
+                    <strong>Languages : </strong>
+                    {% for language in languages %}
+                        <span class="skill">{{ language.name }}</span>
+                        {% if not loop.last %} - {% endif %}
+                    {% endfor %}
+                </div>
+                <br>
+
+                <div class="skills-list">
+                    <strong>Frameworks : </strong>
+                    {% for framework in frameworks %}
+                        <span class="skill">{{ framework.name }}</span>
+                        {% if not loop.last %} - {% endif %}
+                    {% endfor %}
+                </div>
+
+                <hr class="opacity-20 my-30">
+
+                <h3 data-aos="fade-up" class="title-section-white">Soft Skills</h3>
+                <div class="skills-list">
+                    <strong>Soft Skills : </strong>
+                    {% for softSkill in softSkills %}
+                        <span class="skill">{{ softSkill.name }}</span>
+                        {% if not loop.last %} - {% endif %}
+                    {% endfor %}
+                </div>
+                <a href="{{path('app_contact')}}" class="btn-contact fade-in-3 mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
+            </div>
+        </div>
         
     </div>
 {% endblock %}

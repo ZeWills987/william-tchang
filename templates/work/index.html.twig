@@ -1,20 +1,51 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block title %}Hello WorkController!{% endblock %}
+    {% block title %}Work William{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/William Tchang/Desktop/perso/Portfolio/william-tchang/src/Controller/WorkController.php</code></li>
-        <li>Your template at <code>C:/Users/William Tchang/Desktop/perso/Portfolio/william-tchang/templates/work/index.html.twig</code></li>
-    </ul>
-</div>
-{% endblock %}
+    {% block body %}
+        <div class="layout-maxed home">
+            <div id="project" class="projects mb-70">
+                <div class="top">
+                    <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING IN</h3>
+                    <h2 data-aos="fade-up">UNIVERSITY</h2>
+                    <h2 data-aos="fade-up">WEB AGENCY</h2>
+                    <h2 data-aos="fade-up">SIDE PROJECTS</h2>
+                </div>
+                <div class="swiper-projects mt-10 md:mt-30">
+                    <div class="flex justify-between">
+                        <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
+                        <div data-aos="fade-up" class="next-prev">
+                            <div class="swiper-button-prev">
+                            </div>
+                            <div class="swiper-button-next">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        {% for project in projects %}
+                            <div data-aos="fade-up" class="swiper-slide">
+                                <div class="card-project">
+                                    <img src="{{ asset(project.image) }}" alt="">
+                                    <div class="content">
+                                        <h3 class="title-section-white">{{loop.index}}/{{projects|length}}</h3>
+                                        <div class="bottom">
+                                            <div class="content-text">
+                                                <div class="flex flex-col gap-10">
+                                                    <h3 class="item">{{project.title}} ({{project.date|date('Y')}})</h3>
+                                                    <p>{{project.extract}}</p>
+                                                </div>
+                                            </div>
+                                            <a href="{{project.link}}" class="btn-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

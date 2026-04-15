@@ -1,13 +1,10 @@
-import './stimulus_bootstrap.js';
-import './bootstrap.js';
-/*
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
- */
-import './styles/app.css';
+// assets/app.js
 
+import './bootstrap.js'; // Initialise Stimulus
+import './styles/app.css';
+import './script.js';
+
+// 1. Définition de TxtRotate (Inchangée)
 var TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -21,20 +18,15 @@ var TxtRotate = function (el, toRotate, period) {
 TxtRotate.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
-
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
     var that = this;
     var delta = 300 - Math.random() * 100;
-
     if (this.isDeleting) { delta /= 2; }
-
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
@@ -43,13 +35,13 @@ TxtRotate.prototype.tick = function () {
         this.loopNum++;
         delta = 500;
     }
-
-    setTimeout(function () {
-        that.tick();
-    }, delta);
+    setTimeout(function () { that.tick(); }, delta);
 };
 
-window.onload = function () {
+// 2. Initialisation sécurisée au chargement du DOM
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Initialisation TxtRotate
     var elements = document.getElementsByClassName('typed');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-typed-items');
@@ -58,34 +50,4 @@ window.onload = function () {
             new TxtRotate(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    document.body.appendChild(css);
-};
-
-// Swiper.js
-var swiper = new Swiper(".swiper-projects", {
-    slidesPerView: 1.1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
-
-const header = document.querySelector("header");
-const menu = header.querySelector('.nav-items');
-let burger_btn = header.querySelector('svg');
-
-burger_btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
 });
