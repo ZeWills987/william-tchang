@@ -33,3 +33,5 @@ yarn-error.log
 ###> symfonycasts/sass-bundle ###
 /public/assets/
 ###< symfonycasts/sass-bundle ###
+
+prepros.config
