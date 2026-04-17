@@ -1,0 +1,14 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Edit Experience {{ experience.title }} {% endblock %}
+
+{% block body %}
+    <div class="layout-maxed experience-page">
+        <div class="bg-dark px-20 py-30 mb-70 all-experiences">
+            <h1>Edit Experience : {{experience.title}}</h1>
+            {{ include('/admin/experience/_form.html.twig', {'button_label': 'Update'}) }}
+
+            <a href="{{ path('app_experience_index') }}">BACK TO LIST</a>
+
+    {{ include('/admin/experience/_delete_form.html.twig') }}
+{% endblock %}

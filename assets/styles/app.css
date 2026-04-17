@@ -12117,6 +12117,7 @@ body:has(dialog[open]) {
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 7.2px;
+  font-weight: 300;
   color: #131315;
   opacity: 0.4 !important;
   font-family: "General Sans", sans-serif;
@@ -13388,6 +13389,128 @@ body:has(dialog[open]) {
 .single-work .link-extern:hover {
   background-color: rgba(19, 19, 21, 0.8);
   color: rgba(255, 255, 255, 0.8);
+}
+
+.about-page .experiences-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.about-page .experiences-section h3,
+.about-page .experiences-section h4 {
+  margin: 0;
+  color: #131315;
+}
+.about-page .experiences-section h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.about-page .experiences-section .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about-page .experiences-section .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+.about-page .experiences-section .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about-page .experiences-section hr {
+  color: #131315;
+  opacity: 0.4;
+}
+
+.experience-page {
+  padding: 50px 0 0 0;
+}
+.experience-page.show .all-experiences table th {
+  width: 200px;
+}
+.experience-page .all-experiences {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 20px;
+  gap: 30px;
+}
+.experience-page .all-experiences table {
+  border: 1px solid #fff;
+}
+.experience-page .all-experiences table th {
+  background-color: rgb(255, 115, 37);
+}
+.experience-page .all-experiences table td.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.experience-page .all-experiences table td a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.experience-page .all-experiences table th,
+.experience-page .all-experiences table td {
+  border-bottom: 1px solid #fff;
+}
+.experience-page .all-experiences table th,
+.experience-page .all-experiences table td {
+  padding: 10px;
+}
+.experience-page .all-experiences table th:not(:last-child),
+.experience-page .all-experiences table td:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.experience-page form {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.experience-page form #experience {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+.experience-page form #experience > div {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+.experience-page form #experience > div input,
+.experience-page form #experience > div textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.experience-page form #experience > div input:focus-visible,
+.experience-page form #experience > div textarea:focus-visible {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* - - - -    Z-index Element Priority    - - - -  */

@@ -3,7 +3,7 @@
 {% block title %}About William{% endblock %}
 
 {% block body %}
-    <div class="layout-maxed home">
+    <div class="layout-maxed about-page">
         <div class="about-me my-70">
             <div class="flex flex-col justify-between">
                 <h2 data-aos="fade-up" class="title-section">ABOUT ME</h2>
@@ -12,6 +12,74 @@
             <h3 data-aos="fade-up" class="fade-in-scroll">
                 Hi I’m William and I am passionate about everything that has to do with App Developpement and Web. I enjoy working with agencies and enthusiastic people who want to solve problems through beautiful designs and experiences.
             </h3>
+        </div>
+
+        <div class="experiences-section my-70">
+            <div class="left">
+                <h2 data-aos="fade-up" class="title-section">EXPERIENCES</h2>
+                <p data-aos="fade-up">I have worked with various clients to deliver high-quality applications and websites. My experience includes working with different technologies and frameworks to create innovative solutions.</p>
+            </div>
+            <div class="right">
+                <div class="experience" data-aos="fade-up">
+                    <h4 class="title-section">2024 - 2025</h4>
+                    <h3>Full-Stack Developer at Web Agency</h3>
+                </div>
+                <hr data-aos="fade-up">
+                <div class="experience" data-aos="fade-up">
+                    <h4 class="title-section">2021 - 2025</h4>
+                    <h3>Student of Bordeaux IUT Computer Science</h3>
+                </div>
+                <hr data-aos="fade-up">
+                <div class="experience" data-aos="fade-up">
+                    <h4 class="title-section">2021 - 2021</h4>
+                    <h3>Construction worker</h3>
+                </div>
+            </div>
+        </div>
+
+                <div id="project" class="projects mb-70">
+            <div class="top">
+                <h3 data-aos="fade-up" class="title-section-white">WHAT I'M DOING</h3>
+                <h2 data-aos="fade-up">WEB DEVELOPEMENT</h2>
+                <h2 data-aos="fade-up">FRONT-END</h2>
+                <h2 data-aos="fade-up">BACK-END</h2>
+                <h2 data-aos="fade-up">UI/UX Design</h2>
+            </div>
+            <div class="swiper-projects mt-10 md:mt-30">
+                <div class="flex justify-between">
+                    <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
+                    <div data-aos="fade-up" class="next-prev">
+                        <div class="swiper-button-prev">
+                        </div>
+                        <div class="swiper-button-next">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    {% for project in projects %}
+                        <div data-aos="fade-up" class="swiper-slide">
+                            <div class="card-project">
+                                <img src="{{ asset(project.image) }}" alt="">
+                                <div class="content">
+                                    <h3 class="title-section-white">{{loop.index}}/{{projects|length}}</h3>
+                                    <div class="bottom">
+                                        <div class="content-text">
+                                            <div class="flex flex-col gap-10">
+                                                <h3 class="item">{{project.title}} ({{project.date|date('Y')}})</h3>
+                                                <p>{{project.extract}}</p>
+                                            </div>
+                                        </div>
+                                        <a href="{{project.link}}" class="btn-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 {% endblock %}

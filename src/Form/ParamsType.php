@@ -87,6 +87,7 @@ class ParamsType extends AbstractType
                 'label' => 'Gitlab',
                 'required' => false
             ])
+            
         ;
     }
 

@@ -44,6 +44,12 @@ class Project
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTime $date = null;
 
+    #[ORM\ManyToOne(inversedBy: 'projects')]
+    private ?Experience $experience = null;
+
+    #[ORM\Column]
+    private ?bool $is_published = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -165,6 +171,30 @@ class Project
     public function setDate(?\DateTime $date): static
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getExperience(): ?Experience
+    {
+        return $this->experience;
+    }
+
+    public function setExperience(?Experience $experience): static
+    {
+        $this->experience = $experience;
+
+        return $this;
+    }
+
+    public function isPublished(): ?bool
+    {
+        return $this->is_published;
+    }
+
+    public function setIsPublished(bool $is_published): static
+    {
+        $this->is_published = $is_published;
 
         return $this;
     }

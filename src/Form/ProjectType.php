@@ -3,6 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Project;
+use App\Entity\Experience;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -59,13 +62,11 @@ class ProjectType extends AbstractType
                 'mapped' => false,
             ])
             ->add('date', DateType::class, [
-                'widget' => 'choice',          // listes déroulantes
-                'input'  => 'datetime',        // objet \DateTimeInterface côté PHP
+                'widget' => 'choice',          
+                'input'  => 'datetime',        
                 'format' => 'dMy',
                 'years'  => range((int)date('Y') - 100, (int)date('Y') + 5),
-                'html5'  => false,             // éviter l’input type="date" HTML5
-                // Astuce: comme on n’affiche que l’année, Symfony remplira mois/jour à 1
-                // si non fournis (selon version/composant). Pour être sûr:
+                'html5'  => false,
                 'empty_data' => function ($form) {
                     $y = $form->get('year')->getData();
                     return $y ? (new \DateTimeImmutable(sprintf('%d-01-01', $y))) : null;
@@ -74,6 +75,23 @@ class ProjectType extends AbstractType
             ->add('extract', TextareaType::class, [
                 'label' => 'Extrait',
                 'required' => false
+            ])
+            ->add('experience', EntityType::class, [
+                'class' => Experience::class,
+                'choice_label' => 'company',
+                'label' => 'Entreprise / Expérience liée',
+                'placeholder' => 'Projet indépendant (aucun)',
+                'required' => false,
+                'attr' => ['class' => 'form-control']
+            ])
+            ->add('is_published', ChoiceType::class, [
+                'choices' => [
+                    'Publié' => true,
+                    'Brouillon' => false,
+                ],
+                'label' => 'Statut de publication',
+                'expanded' => true,
+                'multiple' => false,
             ])
         ;
     }
