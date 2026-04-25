@@ -97,3 +97,25 @@
         border-radius: 10px;
     }
 }
+
+@media screen and (max-width:$medium) {
+    .work-card {
+        a:hover {
+            color: $primary;
+        }
+
+        .bottom {
+            h3 {
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 2px;
+            }
+
+            p,
+            li {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

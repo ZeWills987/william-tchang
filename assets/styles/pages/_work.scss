@@ -15,3 +15,21 @@
         height: max-content;
     }
 }
+
+// MOBILE
+@media screen and (max-width:$medium) {
+    .work-page {
+        h1 {
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        .works {
+            grid-template-columns: repeat(1, minmax(300px, 1fr));
+
+            .bottom .col:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}

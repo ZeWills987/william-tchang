@@ -13087,6 +13087,18 @@ body:has(dialog[open]) {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .work-card .bottom h3 {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 2px;
+  }
+  .work-card .bottom p,
+  .work-card .bottom li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 .home .presentation {
   padding: 90px 20px 20px 20px;
   height: 800px;
@@ -13341,6 +13353,19 @@ body:has(dialog[open]) {
   height: max-content;
 }
 
+@media screen and (max-width: 992px) {
+  .work-page h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .work-page .works {
+    -ms-grid-columns: (minmax(300px, 1fr))[1];
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+  .work-page .works .bottom .col:nth-child(2) {
+    display: none;
+  }
+}
 .single-work {
   margin-bottom: 50px;
 }
