@@ -20,20 +20,15 @@
                 <p data-aos="fade-up">I have worked with various clients to deliver high-quality applications and websites. My experience includes working with different technologies and frameworks to create innovative solutions.</p>
             </div>
             <div class="right">
-                <div class="experience" data-aos="fade-up">
-                    <h4 class="title-section">2024 - 2025</h4>
-                    <h3>Full-Stack Developer at Web Agency</h3>
-                </div>
-                <hr data-aos="fade-up">
-                <div class="experience" data-aos="fade-up">
-                    <h4 class="title-section">2021 - 2025</h4>
-                    <h3>Student of Bordeaux IUT Computer Science</h3>
-                </div>
-                <hr data-aos="fade-up">
-                <div class="experience" data-aos="fade-up">
-                    <h4 class="title-section">2021 - 2021</h4>
-                    <h3>Construction worker</h3>
-                </div>
+                {% for experience in experiences %}
+                    <div class="experience" data-aos="fade-up">
+                        <h4 class="title-section">{{ experience.dateStart|date("Y") }} - {{ experience.dateEnd|date("Y") }}</h4>
+                        <h3>{{ experience.job }} <br> {{ experience.company }}</h3>
+                    </div>
+                    {% if not loop.last %}
+                        <hr data-aos="fade-up">
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
 

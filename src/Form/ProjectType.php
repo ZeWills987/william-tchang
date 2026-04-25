@@ -78,7 +78,7 @@ class ProjectType extends AbstractType
             ])
             ->add('experience', EntityType::class, [
                 'class' => Experience::class,
-                'choice_label' => 'company',
+                'choice_label' => 'job',
                 'label' => 'Entreprise / Expérience liée',
                 'placeholder' => 'Projet indépendant (aucun)',
                 'required' => false,

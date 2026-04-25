@@ -37,7 +37,8 @@ class ExperienceType extends AbstractType
                 'label' => 'Projets liés',
                 'multiple' => true,
                 'expanded' => true,
-                'required' => false
+                'required' => false,
+                'attr' => ['class' => 'form-control']
             ])
         ;
     }

@@ -10,9 +10,15 @@
             color: $secondary;
         }
 
+        h4 {
+            display: flex;
+            align-items: center;
+        }
+
         h3 {
             font-size: 20px;
             line-height: 26px;
+            text-align: end;
         }
 
         .left {
