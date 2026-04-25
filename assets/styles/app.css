@@ -13555,6 +13555,7 @@ body:has(dialog[open]) {
   }
   .about-page .experiences-section h3 {
     font-size: 18px;
+    line-height: 24px;
     text-align: start;
   }
   .about-page .experiences-section .experience {
@@ -13726,4 +13727,37 @@ body:has(dialog[open]) {
   color: green;
 }
 
+@media screen and (max-width: 992px) {
+  .contact h1 {
+    font-size: 48px;
+  }
+  .contact .contact-card {
+    padding: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .avatar-part {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .contact .avatar-part h2 {
+    font-size: 16px;
+    letter-spacing: 5.6px;
+  }
+  .contact .avatar-part img {
+    width: 200px;
+    height: 200px;
+  }
+  .contact .contact-form {
+    padding: 20px 0;
+  }
+}
 /* - - - -    Z-index Element Priority    - - - -  */
