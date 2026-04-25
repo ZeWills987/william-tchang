@@ -13088,6 +13088,9 @@ body:has(dialog[open]) {
 }
 
 @media screen and (max-width: 992px) {
+  .work-card a:hover {
+    color: #fff;
+  }
   .work-card .bottom h3 {
     font-size: 14px;
     line-height: 22px;
@@ -13355,6 +13358,7 @@ body:has(dialog[open]) {
 
 @media screen and (max-width: 992px) {
   .work-page h1 {
+    margin: 25px 0 25px 0;
     font-size: 48px;
     line-height: 60px;
   }
@@ -13438,6 +13442,51 @@ body:has(dialog[open]) {
   color: rgba(255, 255, 255, 0.8);
 }
 
+@media screen and (max-width: 992px) {
+  .single-work h1 {
+    margin: 0 0 25px 0;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .single-work .description {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .single-work .details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .single-work .details .infos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .single-work .details p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 5.6px;
+  }
+  .single-work .details h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: visible;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: vertical;
+    text-overflow: initial;
+  }
+  .single-work img {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
 .about-page .experiences-section {
   display: -ms-grid;
   display: grid;

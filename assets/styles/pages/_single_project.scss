@@ -68,3 +68,52 @@
         }
     }
 }
+
+// MOBILE
+@media screen and (max-width:$medium) {
+    .single-work {
+        h1 {
+            margin: 0 0 25px 0;
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        .description {
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .details {
+            flex-direction: column;
+            gap: 10px;
+
+            .infos {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 5.6px;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                line-height: 22px;
+                overflow: visible;
+                -webkit-line-clamp: initial;
+                -webkit-box-orient: vertical;
+                text-overflow: initial;
+            }
+        }
+
+        img {
+            margin-top: 25px;
+            width: 100%;
+        }
+    }
+}
