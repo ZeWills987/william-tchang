@@ -11653,9 +11653,12 @@ footer .copyright {
   }
   .projects .top h2 {
     width: 100%;
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 38px;
+    line-height: 50px;
     text-wrap: wrap;
+  }
+  .projects .swiper-projects h3 {
+    letter-spacing: 5px;
   }
 }
 
@@ -12744,8 +12747,13 @@ body:has(dialog[open]) {
   }
   .swiper-projects .next-prev .swiper-button-prev,
   .swiper-projects .next-prev .swiper-button-next {
+    padding: 5px;
     width: 30px;
     height: 30px;
+  }
+  .swiper-projects .next-prev .swiper-button-prev svg,
+  .swiper-projects .next-prev .swiper-button-next svg {
+    height: 70%;
   }
   .swiper-projects .swiper-pagination {
     left: calc(50% - 30px);
@@ -12948,6 +12956,7 @@ body:has(dialog[open]) {
     padding-right: 0;
   }
   .card-project .content .content-text {
+    max-width: 250px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -12959,9 +12968,19 @@ body:has(dialog[open]) {
     line-height: 20px;
   }
   .card-project .content .content-text .item {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 400;
+    letter-spacing: 2px;
+  }
+  .card-project .content .content-text p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-project svg {
+    padding: 6px;
+    width: 30px;
+    height: 30px;
   }
 }
 .work-card {
@@ -13106,6 +13125,9 @@ body:has(dialog[open]) {
 @media screen and (max-width: 992px) {
   .home .presentation {
     border-radius: 30px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 

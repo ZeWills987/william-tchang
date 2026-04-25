@@ -64,10 +64,17 @@
 
             h2 {
                 width: 100%;
-                font-size: 40px;
-                line-height: 52px;
+                font-size: 38px;
+                line-height: 50px;
                 text-wrap: wrap;
             }
         }
+
+        .swiper-projects {
+            h3 {
+                letter-spacing: 5px;
+            }
+        }
+
     }
 }

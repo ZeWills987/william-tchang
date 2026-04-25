@@ -96,8 +96,13 @@
 
             .swiper-button-prev,
             .swiper-button-next {
+                padding: 5px;
                 width: 30px;
                 height: 30px;
+
+                svg {
+                    height: 70%;
+                }
             }
         }
 
