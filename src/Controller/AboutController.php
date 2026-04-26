@@ -23,6 +23,7 @@ final class AboutController extends AbstractController
         $softSkills = $skillsRepository->findBy(['type' => 'softSkills'],['ordered' => 'ASC']);
 
         return $this->render('about/index.html.twig', [
+            'params' => $paramsRepository->findAll()[0] ?? null,
             'experiences' => $experiences,
             'projects' => $projectRepository->findBy([], ['date' => 'DESC']),
             'languages' => $languages,

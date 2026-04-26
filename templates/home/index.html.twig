@@ -13,19 +13,19 @@
             <a href="{{path('app_contact')}}" class="btn-contact fade-in-3 mt-40 mb-70"><div class="in">Contact Me <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>
             <div class="grid md:grid-cols-2 gap-20">
                     <div class="card-branding-project fade-in-4">
-                        <img src="{{ asset('image/featt.png') }}" alt="Feat website home page">
+                        <img src="{{ asset(projects[0].image) }}" alt="Feat website home page">
                         <div class="content flex justify-between align-items-center">
-                            <h3 class="title-card">Featt</h3>
-                            <a href="" class="btn-more">
+                            <h3 class="title-card">{{ projects[0].title }}</h3>
+                            <a href="{{ projects[0].link }}" class="btn-more">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </div>
                     <div class="card-branding-project fade-in-6">
-                        <img src="{{ asset('image/symfo-stream.png') }}" alt="Symfo-stream website home page">
+                        <img src="{{ asset(projects[1].image) }}" alt="Symfo-stream website home page">
                         <div class="content flex justify-between align-items-center">
-                            <h3 class="title-card">Symfo-Stream</h3>
-                            <a class="btn-more" href="">
+                            <h3 class="title-card">{{ projects[1].title }}</h3>
+                            <a class="btn-more" href="{{ projects[1].link }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
@@ -39,9 +39,9 @@
                 <h2 data-aos="fade-up">WEB DEVELOPEMENT</h2>
                 <h2 data-aos="fade-up">FRONT-END</h2>
                 <h2 data-aos="fade-up">BACK-END</h2>
-                <h2 data-aos="fade-up">UI/UX Design</h2>
+                <h2 data-aos="fade-up">SOFTWARE DEVELOPMENT</h2>
             </div>
-            <div class="swiper-projects mt-10 md:mt-30">
+            <div class="swiper-projects mt-10 md:mt-30" data-controller="swiper">
                 <div class="flex justify-between">
                     <h3 data-aos="fade-up" class="title-section-white m-0">SELECTED PROJECT</h3>
                     <div data-aos="fade-up" class="next-prev">
